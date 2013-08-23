@@ -88,7 +88,7 @@
                 
                 	<h3>Address</h3>
                       
-                	<p>123 Something Road,<br>Something Town,<br>Something County,<br>United Kingdom</p>
+                	<p>HUMANNE HOMES ( T ) LTD.,<br>P.O.Box 1545,<br>Dar es Salaam,<br>Tanzania.</p>
                 
                 </div>
                 <!-- WIDGET -->
@@ -99,11 +99,12 @@
                            
                 	<ul>
                     
-                   	  <li>Phone: +44(0) 1234 567 890</li>
-                      <li>Email: info@domainname.co</li>
-                      <li>Twitter: <a href="#" title="Join Us On Twitter">@UBLDesigns</a></li>
-                      <li>Facebook: <a href="#" title="Join Us On Facebook">UBLdesigns</a></li>
-                      <li>Linked In: <a href="#" title="Join Us On Linked In">UBLdesigns</a></li>
+                   	  <li>Tel: +255 22 2864343</li>
+                   	  <li>Mobile: +255 784 248 227</li>
+                      <li>Email: info@humannehomes.com</li>
+                      <li>Twitter: <a href="#" title="Join Us On Twitter">@Humannehomes</a></li>
+                      <li>Facebook: <a href="#" title="Join Us On Facebook">Humannehomes</a></li>
+                      <li>Linked In: <a href="#" title="Join Us On Linked In">Humannehomes</a></li>
                     
                     </ul>
                 
@@ -149,62 +150,11 @@
 <!-- HEADER AND MAIN SECTION -->
 
 <!-- FOOTER WIDGET SECTION -->
-<section class="footerwidget_area">
-
-	<div class="footer_widget_container">
-
-        <!-- WIDGET -->
-        <div class="widget">
-        
-            <h3>Pages</h3>
-                   
-            <ul>
-            
-                <li><a href="page1.html" title="Page Version 1">Page Layout 1</a></li>
-                <li><a href="page2.html" title="Page Version 2">Page Layout 2</a></li>
-                <li><a href="page3.html" title="Full Page Version">Full Page Layout</a></li>
-                <li><a href="page4.html" title="Typography &amp; Layouts">Typography &amp; Grids</a></li>
-                <li><a href="page5.html" title="Icons &amp; Buttons">Icons, Buttons &amp; Images</a></li>
-                <li><a href="page6.html" title="Tabs &amp; Accordions">Tabs, Accordions &amp; Lists</a></li>
-                <li><a href="page7.html" title="Theme Tables">Theme Tables</a></li>
-            
-            </ul>
-        
-        </div>
-        <!-- WIDGET -->
-        <!-- WIDGET -->
-        <div class="widget">
-        
-            <h3>Flickr Feed</h3>
-            
-            <ul id="flickr"></ul>
-        
-        </div>
-        <!-- WIDGET -->
-        <!-- WIDGET -->
-    	<div class="widget">
-        
-        	<h3>Latest Tweets</h3>
-            
-            <div class="twitterbody"></div>
-        
-        </div>
-        <!-- WIDGET -->
-        
-	</div>
-
-</section>
+<?php include './includes/footerwidget_area.php'; ?>
 <!-- FOOTER WIDGET SECTION -->
 <div class="clear"></div>
 <!-- FOOTER SECTION -->
-<footer class="footer">
-
-	&copy; 2012 - UBL Designs, All rights reserved!&nbsp; -  
-    <!-- DO NOT REMOVE, IF FOUND TO BE REMOVED DMCA TAKE DOWN NOTICE WILL BE PROVIDED TO SHUT YOUR HOSTING DOWN, TO YOUR HOSTING PROVIDER -->
-    <a href="http://www.derby-web-design-agency.co.uk" title="Template by UBL Designs">Template By UBL Designs</a>
-    <!-- DO NOT REMOVE, IF FOUND TO BE REMOVED DMCA TAKE DOWN NOTICE WILL BE PROVIDED TO SHUT YOUR HOSTING DOWN, TO YOUR HOSTING PROVIDER -->
-
-</footer>
+<?php include './includes/footer.php'; ?>
 <!-- FOOTER SECTION -->
 
 <!-- BACK TO TOP BUTTON -->
