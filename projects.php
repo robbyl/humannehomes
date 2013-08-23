@@ -12,7 +12,7 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/media.css" type="text/css" />
-<link id="changestylesheet" rel="stylesheet" href="css/ColourThemes/orange.css" type="text/css" />
+<link id="changestylesheet" rel="stylesheet" href="css/ColourThemes/green.css" type="text/css" />
 <!-- CSS SECTION -->
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" /> 
@@ -36,7 +36,7 @@
 <body>
 
 <!-- DROPDOWN MESSAGE SECTION -->
-<section class="dropdown_wrap">
+<!--<section class="dropdown_wrap">
 
 	<div class="dropdown_inner">
     
@@ -46,40 +46,17 @@
     
     </div>
     
-</section>
+</section>-->
 <!-- DROPDOWN MESSAGE SECTION -->
 
 <!-- SOCIAL MEDIA BUTTONS SECTION -->
-<section class="socialmedia_buttons">
+<?php include './includes/socialmedia_buttons.php'; ?>
 
-	<div class="largecontainer">
-
-        <ul class="sbut">
-        
-            <li><a href="#" title="Join us on twitter"><img src="images/twitter.png" alt="Join us on twitter"></a></li>
-            <li><a href="#" title="Join us on facebook"><img src="images/facebook.png" alt="Join us on facebook"></a></li>
-            <li><a href="#" title="Join us on linked in"><img src="images/linkedin.png" alt="Join us on linked in"></a></li>
-            <li><a href="#" title="Join us on youtube"><img src="images/youtube.png" alt="Join us on youtube"></a></li>
-            <li><a href="#" title="Join us on envato"><img src="images/envato.png" alt="Join us on envato"></a></li>
-            <li><a href="#" title="Join us on dribbble"><img src="images/dribbble.png" alt="Join us on dribbble"></a></li>
-            <li><a href="#" title="Join us on rss"><img src="images/rss.png" alt="Join us on rss"></a></li>
-            
-            <!-- DROPDOWN BUTTON -->
-            <li class="plus"><a href="#" title="Click Here To Drop Down"><img src="images/plus.png" alt="Click Here To Drop Down"></a></li>
-        	<!-- DROPDOWN BUTTON -->
-            
-        </ul>
-        
-	</div>
-    
-    <div class="shadoweffect"></div>
-    
-</section>
 <div class="clear"></div>
 <!-- SOCIAL MEDIA BUTTONS SECTION -->
 
 <!-- HEADER AND MAIN SECTION -->
-<div class="mainbg background8">
+<div class="mainbg background2">
 	
     <!-- CONTAINER -->
     <div class="maincontainer">
@@ -88,104 +65,8 @@
         <section class="main_section">
         
         	<!-- HEADER SECTION -->
-            <header class="header">
+            <?php include './includes/header.php'; ?>
                 
-                <div class="logonav">
-                    <!-- LOGO SECTION -->
-                    <section class="logo"><a href="index.html" title="Lola Responsive Theme"><img src="images/logo.png" alt="Lola Responsive Html Theme"></a></section>
-                    <!-- LOGO SECTION -->
-                    
-                    <!-- NAVIGATION SECTION -->
-                    <nav class="nav">
-                    
-                        <ul>
-                        
-                            <li><a href="index.html" title="Lola's Homepage">Home</a>
-                            
-                                <ul>
-                                
-                                    <li><a href="index.html" title="Homepage With Slider">Homepage With Slider</a></li>
-                                    <li><a href="index4.html" title="Homepage Without Slider">Homepage Without Slider</a></li>
-                                
-                                </ul>
-                            
-                            </li>
-                            <li><a href="page1.html" title="Lola's Pages">Pages</a>
-                            
-                                <ul>
-                                
-                                    <li><a href="page1.html" title="Page Version 1">Page Layout 1</a></li>
-                                    <li><a href="page2.html" title="Page Version 2">Page Layout 2</a></li>
-                                    <li><a href="page3.html" title="Full Page Version">Full Page Layout</a></li>
-                                    <li><a href="page4.html" title="Typography &amp; Layouts">Typography &amp; Grids</a></li>
-                                    <li><a href="page5.html" title="Icons &amp; Buttons">Icons, Buttons &amp; Images</a></li>
-                                    <li><a href="page6.html" title="Tabs &amp; Accordions">Tabs, Accordions &amp; Lists</a></li>
-                                    <li><a href="page7.html" title="Theme Tables">Theme Tables</a></li>
-                                    <li><a href="page8.html" title="404 Error Page">404 Error Page</a></li>
-                                    <li><a href="#" title="Hover Here">Hover Here</a>
-                                    
-                                        <ul>
-                                        
-                                            <li><a href="#" title="Dummy Nav">Dummy Nav</a></li>
-                                            <li><a href="#" title="Dummy Nav">Dummy Nav</a></li>
-                                            <li><a href="#" title="Dummy Nav">Dummy Nav</a></li>
-                                        
-                                        </ul>
-                                    
-                                    </li>
-                                
-                                </ul>
-                            
-                            </li>
-                            <li><a href="portfolio4.html" title="Lola's Portfolio">Portfolio</a>
-                            
-                                <ul>
-                                    <li><a href="portfolio.html" title="Portfolio Version 1">Portfolio Version 1</a></li>
-                                    <li><a href="portfolio2.html" title="Portfolio Version 2">Portfolio Version 2</a></li>
-                                    <li><a href="portfolio3.html" title="Portfolio Version 3">Portfolio Version 3</a></li>
-                                    <li><a href="portfolio4.html" title="Portfolio Version 3">Portfolio Version 4</a></li>
-                                    <li><a href="single-portfolio.html" title="Portfolio Detail 1">Portfolio Detail 1</a></li>
-                                    <li><a href="single-portfolio2.html" title="Portfolio Detail 2">Portfolio Detail 2</a></li>
-                                </ul>
-                            
-                            </li>
-                            <li><a href="blog.html" title="Lola's Blog">Blog</a>
-                            
-                                <ul>
-                                
-                                    <li><a href="blog2.html" title="Left Sidebar">Left Sidebar</a></li>
-                                    <li><a href="blog.html" title="Right Sidebar">Right Sidebar</a></li>
-                                    <li><a href="single-blog.html" title="Left Sidebar">Blog Detail 1</a></li>
-                                    <li><a href="single-blog2.html" title="Right Sidebar">Blog Detail 2</a></li>
-                                
-                                </ul>
-                            
-                            </li>
-                            <li><a href="contact.html" title="Contact Lola">Contact</a>
-                            
-                                <ul>
-                                
-                                    <li><a href="contact.html" title="Version 1">Version 1</a></li>
-                                    <li><a href="contact2.html" title="Version 2">Version 2</a></li>
-                                    <li><a href="contact3.html" title="Version 3">Version 3</a></li>
-                                    <li><a href="contact4.html" title="Version 4">Version 4</a></li>
-                                
-                                </ul>
-                                
-                            </li>
-                        
-                        </ul>
-                    
-                    </nav>
-                    <!-- NAVIGATION SECTION -->
-                    
-                    <div class="clear"></div>
-                
-              </div>
-              
-              <div class="clear"></div>
-            
-            </header>
             <div class="clear"></div>
             <!-- HEADER SECTION -->
         	<!-- PAGE TITLE SECTION -->
@@ -219,23 +100,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="other">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Media Logo Design"><img src="images/portfolio/imagedemo.jpg" alt="Media Logo Design"></a>
+                        <a href="details" title="Media Logo Design"><img src="images/portfolio/imagedemo.jpg" alt="Media Logo Design"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Media Logo Design">Media Logo Design</a></h3>
-                        <!-- PORTFOLIO TITLE -->
-                        <!-- PORTFOLIO DESCRIPTION -->
-                        <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
-                        <!-- PORTFOLIO DESCRIPTION -->
-                    </li>
-                    <!-- PORTFOLIO ITEM -->
-                    <!-- PORTFOLIO ITEM -->
-                    <li class="other">
-                        <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Nike Advert Campaign"><img src="images/portfolio/imagedemo.jpg" alt="Nike Advert Campaign"></a>
-                        <!-- PORTFOLIO IMAGE -->
-                        <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Nike Advert Campaign">Nike Advert Campaign</a></h3>
+                        <h3><a href="details" title="Media Logo Design">Media Logo Design</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -245,10 +113,23 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="other">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Havalon Logo Design"><img src="images/portfolio/imagedemo.jpg" alt="Havalon Logo Design"></a>
+                        <a href="details" title="Nike Advert Campaign"><img src="images/portfolio/imagedemo.jpg" alt="Nike Advert Campaign"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Havalon Logo Design">Havalon Logo Design</a></h3>
+                        <h3><a href="details" title="Nike Advert Campaign">Nike Advert Campaign</a></h3>
+                        <!-- PORTFOLIO TITLE -->
+                        <!-- PORTFOLIO DESCRIPTION -->
+                        <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
+                        <!-- PORTFOLIO DESCRIPTION -->
+                    </li>
+                    <!-- PORTFOLIO ITEM -->
+                    <!-- PORTFOLIO ITEM -->
+                    <li class="other">
+                        <!-- PORTFOLIO IMAGE -->
+                        <a href="details" title="Havalon Logo Design"><img src="images/portfolio/imagedemo.jpg" alt="Havalon Logo Design"></a>
+                        <!-- PORTFOLIO IMAGE -->
+                        <!-- PORTFOLIO TITLE -->
+                        <h3><a href="details" title="Havalon Logo Design">Havalon Logo Design</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -258,10 +139,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="web">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Moot Wordpress Theme"><img src="images/portfolio/imagedemo.jpg" alt="Moot Wordpress Theme"></a>
+                        <a href="details" title="Moot Wordpress Theme"><img src="images/portfolio/imagedemo.jpg" alt="Moot Wordpress Theme"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Moot Wordpress Theme">Moot Wordpress Theme</a></h3>
+                        <h3><a href="details" title="Moot Wordpress Theme">Moot Wordpress Theme</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -271,10 +152,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="graphic print">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Axe Advert Design"><img src="images/portfolio/imagedemo.jpg" alt="Axe Advert Design"></a>
+                        <a href="details" title="Axe Advert Design"><img src="images/portfolio/imagedemo.jpg" alt="Axe Advert Design"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Axe Advert Design">Axe Advert Design</a></h3>
+                        <h3><a href="details" title="Axe Advert Design">Axe Advert Design</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -284,10 +165,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="other">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Republic Logo Design"><img src="images/portfolio/imagedemo.jpg" alt="Republic Logo Design"></a>
+                        <a href="details" title="Republic Logo Design"><img src="images/portfolio/imagedemo.jpg" alt="Republic Logo Design"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Republic Logo Design">Republic Logo Design</a></h3>
+                        <h3><a href="details" title="Republic Logo Design">Republic Logo Design</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -297,10 +178,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="graphic">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Creative Swan"><img src="images/portfolio/imagedemo.jpg" alt="Just a marshmallow"></a>
+                        <a href="details" title="Creative Swan"><img src="images/portfolio/imagedemo.jpg" alt="Just a marshmallow"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Just a marshmallow">Just a marshmallow</a></h3>
+                        <h3><a href="details" title="Just a marshmallow">Just a marshmallow</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -310,10 +191,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="other">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Creative Swan"><img src="images/portfolio/imagedemo.jpg" alt="Creative Swan"></a>
+                        <a href="details" title="Creative Swan"><img src="images/portfolio/imagedemo.jpg" alt="Creative Swan"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Creative Swan">Creative Swan</a></h3>
+                        <h3><a href="details" title="Creative Swan">Creative Swan</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -323,10 +204,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="web">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Creative Swan"><img src="images/portfolio/imagedemo.jpg" alt="Stella Wordpress Theme"></a>
+                        <a href="details" title="Creative Swan"><img src="images/portfolio/imagedemo.jpg" alt="Stella Wordpress Theme"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Stella Wordpress Theme">Stella Wordpress Theme</a></h3>
+                        <h3><a href="details" title="Stella Wordpress Theme">Stella Wordpress Theme</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -336,10 +217,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="other">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Nike Advert Campaign"><img src="images/portfolio/imagedemo.jpg" alt="Nike Advert Campaign"></a>
+                        <a href="details" title="Nike Advert Campaign"><img src="images/portfolio/imagedemo.jpg" alt="Nike Advert Campaign"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Nike Advert Campaign">Nike Advert Campaign</a></h3>
+                        <h3><a href="details" title="Nike Advert Campaign">Nike Advert Campaign</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -349,10 +230,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="graphic print">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Axe Advert Design"><img src="images/portfolio/imagedemo.jpg" alt="Axe Advert Design"></a>
+                        <a href="details" title="Axe Advert Design"><img src="images/portfolio/imagedemo.jpg" alt="Axe Advert Design"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Axe Advert Design">Axe Advert Design</a></h3>
+                        <h3><a href="details" title="Axe Advert Design">Axe Advert Design</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>
@@ -362,10 +243,10 @@
                     <!-- PORTFOLIO ITEM -->
                     <li class="graphic">
                         <!-- PORTFOLIO IMAGE -->
-                        <a href="single-portfolio.html" title="Creative Swan"><img src="images/portfolio/imagedemo.jpg" alt="Just a marshmallow"></a>
+                        <a href="details" title="Creative Swan"><img src="images/portfolio/imagedemo.jpg" alt="Just a marshmallow"></a>
                         <!-- PORTFOLIO IMAGE -->
                         <!-- PORTFOLIO TITLE -->
-                        <h3><a href="single-portfolio.html" title="Just a marshmallow">Just a marshmallow</a></h3>
+                        <h3><a href="details" title="Just a marshmallow">Just a marshmallow</a></h3>
                         <!-- PORTFOLIO TITLE -->
                         <!-- PORTFOLIO DESCRIPTION -->
                         <p>similiquesunt in culpa qui officia deserunt mollitia animi</p>

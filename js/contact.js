@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
 		var usersname = jQuery('#name');
 		var userscomment = jQuery('#commentarea');
 		var isvalid = 1;
-		var url = 'contact.php';
+		var url = 'send.php';
 		
 		//Checking information is correct before sending data
 		

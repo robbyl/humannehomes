@@ -13,13 +13,13 @@
             <li><a href="#" title="Join us on rss"><img src="images/rss.png" alt="Join us on rss"></a></li>
 
             <!-- DROPDOWN BUTTON -->
-            <li class="plus"><a href="#" title="Click Here To Drop Down"><img src="images/plus.png" alt="Click Here To Drop Down"></a></li>
+            <!--<li class="plus"><a href="#" title="Click Here To Drop Down"><img src="images/plus.png" alt="Click Here To Drop Down"></a></li>-->
             <!-- DROPDOWN BUTTON -->
 
         </ul>
 
     </div>
 
-    <div class="shadoweffect"></div>
+    <!--<div class="shadoweffect"></div>-->
 
 </section>

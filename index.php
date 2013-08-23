@@ -38,17 +38,7 @@
     <body>
 
         <!-- DROPDOWN MESSAGE SECTION -->
-        <section class="dropdown_wrap">
-
-            <div class="dropdown_inner">
-
-                Buy this theme for just $15 at Themeforest.net - <a href="http://themeforest.net/item/lola-responsive-business-html-theme/3223355?ref=UBL" title="Buy this theme for just $15 at Themeforest.net">Click Here To Buy!</a>
-
-                <div class="dropdown_close"><img src="images/close.png" alt="Close Dropdown"></div>
-
-            </div>
-
-        </section>
+        <?php include './includes/dropdown_wrap.php'; ?>
         <!-- DROPDOWN MESSAGE SECTION -->
 
         <!-- SOCIAL MEDIA BUTTONS SECTION -->
@@ -58,7 +48,7 @@
         <!-- SOCIAL MEDIA BUTTONS SECTION -->
 
         <!-- HEADER AND MAIN SECTION -->
-        <div class="mainbg background8">
+        <div class="mainbg background2">
 
             <!-- CONTAINER -->
             <div class="maincontainer">
@@ -66,104 +56,8 @@
                 <!-- MAIN SECTION -->
                 <section class="main_section">
                     <!-- HEADER SECTION -->
-                    <header class="header">
+                    <?php include './includes/header.php'; ?>
 
-                        <div class="logonav">
-                            <!-- LOGO SECTION -->
-                            <section class="logo"><a href="index.html" title="Lola Responsive Theme"><img src="images/logo.png" alt="Lola Responsive Html Theme"></a></section>
-                            <!-- LOGO SECTION -->
-
-                            <!-- NAVIGATION SECTION -->
-                            <nav class="nav">
-
-                                <ul>
-
-                                    <li><a href="index.html" title="Lola's Homepage">Home</a>
-
-                                        <ul>
-
-                                            <li><a href="index.html" title="Homepage With Slider">Homepage With Slider</a></li>
-                                            <li><a href="index4.html" title="Homepage Without Slider">Homepage Without Slider</a></li>
-
-                                        </ul>
-
-                                    </li>
-                                    <li><a href="page1.html" title="Lola's Pages">Pages</a>
-
-                                        <ul>
-
-                                            <li><a href="page1.html" title="Page Version 1">Page Layout 1</a></li>
-                                            <li><a href="page2.html" title="Page Version 2">Page Layout 2</a></li>
-                                            <li><a href="page3.html" title="Full Page Version">Full Page Layout</a></li>
-                                            <li><a href="page4.html" title="Typography &amp; Layouts">Typography &amp; Grids</a></li>
-                                            <li><a href="page5.html" title="Icons &amp; Buttons">Icons, Buttons &amp; Images</a></li>
-                                            <li><a href="page6.html" title="Tabs &amp; Accordions">Tabs, Accordions &amp; Lists</a></li>
-                                            <li><a href="page7.html" title="Theme Tables">Theme Tables</a></li>
-                                            <li><a href="page8.html" title="404 Error Page">404 Error Page</a></li>
-                                            <li><a href="#" title="Hover Here">Hover Here</a>
-
-                                                <ul>
-
-                                                    <li><a href="#" title="Dummy Nav">Dummy Nav</a></li>
-                                                    <li><a href="#" title="Dummy Nav">Dummy Nav</a></li>
-                                                    <li><a href="#" title="Dummy Nav">Dummy Nav</a></li>
-
-                                                </ul>
-
-                                            </li>
-
-                                        </ul>
-
-                                    </li>
-                                    <li><a href="portfolio4.html" title="Lola's Portfolio">Portfolio</a>
-
-                                        <ul>
-                                            <li><a href="portfolio.html" title="Portfolio Version 1">Portfolio Version 1</a></li>
-                                            <li><a href="portfolio2.html" title="Portfolio Version 2">Portfolio Version 2</a></li>
-                                            <li><a href="portfolio3.html" title="Portfolio Version 3">Portfolio Version 3</a></li>
-                                            <li><a href="portfolio4.html" title="Portfolio Version 3">Portfolio Version 4</a></li>
-                                            <li><a href="single-portfolio.html" title="Portfolio Detail 1">Portfolio Detail 1</a></li>
-                                            <li><a href="single-portfolio2.html" title="Portfolio Detail 2">Portfolio Detail 2</a></li>
-                                        </ul>
-
-                                    </li>
-                                    <li><a href="blog.html" title="Lola's Blog">Blog</a>
-
-                                        <ul>
-
-                                            <li><a href="blog2.html" title="Left Sidebar">Left Sidebar</a></li>
-                                            <li><a href="blog.html" title="Right Sidebar">Right Sidebar</a></li>
-                                            <li><a href="single-blog.html" title="Left Sidebar">Blog Detail 1</a></li>
-                                            <li><a href="single-blog2.html" title="Right Sidebar">Blog Detail 2</a></li>
-
-                                        </ul>
-
-                                    </li>
-                                    <li><a href="contact.html" title="Contact Lola">Contact</a>
-
-                                        <ul>
-
-                                            <li><a href="contact.html" title="Version 1">Version 1</a></li>
-                                            <li><a href="contact2.html" title="Version 2">Version 2</a></li>
-                                            <li><a href="contact3.html" title="Version 3">Version 3</a></li>
-                                            <li><a href="contact4.html" title="Version 4">Version 4</a></li>
-
-                                        </ul>
-
-                                    </li>
-
-                                </ul>
-
-                            </nav>
-                            <!-- NAVIGATION SECTION -->
-
-                            <div class="clear"></div>
-
-                        </div>
-
-                        <div class="clear"></div>
-
-                    </header>
                     <div class="clear"></div>
                     <!-- HEADER SECTION -->
 
@@ -217,33 +111,33 @@
                                 <ul class="latestportfolio_carousel">
                                     <!-- LATEST PORTFOLIO ITEM -->
                                     <li>
-                                        <a href="single-portfolio.html"><img src="images/portfolio/imagedemo.jpg" alt="Just A Marshmallow"></a>
+                                        <a href="details"><img src="images/portfolio/imagedemo.jpg" alt="Just A Marshmallow"></a>
                                         <div class="clear"></div>
-                                        <div class="portpost"><a href="single-portfolio.html"><img src="images/posticon.png" alt="See Post"></a></div>
+                                        <div class="portpost"><a href="details"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
                                     <!-- LATEST PORTFOLIO ITEM -->
                                     <!-- LATEST PORTFOLIO ITEM -->
                                     <li>
-                                        <a href="single-portfolio.html"><img src="images/portfolio/imagedemo.jpg" alt="Stella Theme"></a>
+                                        <a href="details"><img src="images/portfolio/imagedemo.jpg" alt="Stella Theme"></a>
                                         <div class="clear"></div>
-                                        <div class="portpost"><a href="single-portfolio.html"><img src="images/posticon.png" alt="See Post"></a></div>
+                                        <div class="portpost"><a href="details"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
                                     <!-- LATEST PORTFOLIO ITEM -->
                                     <!-- LATEST PORTFOLIO ITEM -->
                                     <li>
-                                        <a href="single-portfolio.html"><img src="images/portfolio/imagedemo.jpg" alt="Havalon Logo Design"></a>
+                                        <a href="details"><img src="images/portfolio/imagedemo.jpg" alt="Havalon Logo Design"></a>
                                         <div class="clear"></div>
-                                        <div class="portpost"><a href="single-portfolio.html"><img src="images/posticon.png" alt="See Post"></a></div>
+                                        <div class="portpost"><a href="details"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
                                     <!-- LATEST PORTFOLIO ITEM -->
                                     <!-- LATEST PORTFOLIO ITEM -->
                                     <li>
-                                        <a href="single-portfolio.html"><img src="images/portfolio/imagedemo.jpg" alt="Moot Wordpress theme"></a>
+                                        <a href="details"><img src="images/portfolio/imagedemo.jpg" alt="Moot Wordpress theme"></a>
                                         <div class="clear"></div>
-                                        <div class="portpost"><a href="single-portfolio.html"><img src="images/posticon.png" alt="See Post"></a></div>
+                                        <div class="portpost"><a href="details"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
                                     <!-- LATEST PORTFOLIO ITEM -->
@@ -257,7 +151,7 @@
                         <!-- LATEST BLOG SECTION -->
                         <section class="latestblog_front">        
 
-                            <div class="container">
+<!--                            <div class="container">
 
                                 <h5 class="latestblog_front_title">Latest Blog Posts</h5>
 
@@ -265,7 +159,7 @@
 
                                 <ul class="latestblog_carousel">
 
-                                    <!-- LATEST BLOG ITEM -->
+                                     LATEST BLOG ITEM 
                                     <li>
                                         <a href="single-blog.html"><img src="images/blog/imagedemo.jpg" alt="Nike - Beauty &amp; The Beast"></a>
                                         <div class="clear"></div>
@@ -274,8 +168,8 @@
                                         <div class="portpost"><a href="single-blog.html"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
-                                    <!-- LATEST BLOG ITEM -->
-                                    <!-- LATEST BLOG ITEM -->
+                                     LATEST BLOG ITEM 
+                                     LATEST BLOG ITEM 
                                     <li>
                                         <a href="single-blog.html"><img src="images/blog/imagedemo.jpg" alt="Axe Advert Campaign"></a>
                                         <div class="clear"></div>
@@ -284,8 +178,8 @@
                                         <div class="portpost"><a href="single-blog.html"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
-                                    <!-- LATEST BLOG ITEM -->
-                                    <!-- LATEST BLOG ITEM -->
+                                     LATEST BLOG ITEM 
+                                     LATEST BLOG ITEM 
                                     <li>
                                         <a href="single-blog.html"><img src="images/portfolio/imagedemo.jpg" alt="Moot Theme"></a>
                                         <div class="clear"></div>
@@ -294,8 +188,8 @@
                                         <div class="portpost"><a href="single-blog.html"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
-                                    <!-- LATEST BLOG ITEM -->
-                                    <!-- LATEST BLOG ITEM -->
+                                     LATEST BLOG ITEM 
+                                     LATEST BLOG ITEM 
                                     <li>
                                         <a href="single-blog.html"><img src="images/portfolio/imagedemo.jpg" alt="Moot Theme"></a>
                                         <div class="clear"></div>
@@ -304,8 +198,8 @@
                                         <div class="portpost"><a href="single-blog.html"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
-                                    <!-- LATEST BLOG ITEM -->
-                                    <!-- LATEST BLOG ITEM -->
+                                     LATEST BLOG ITEM 
+                                     LATEST BLOG ITEM 
                                     <li>
                                         <a href="single-blog.html"><img src="images/portfolio/imagedemo.jpg" alt="Moot Theme"></a>
                                         <div class="clear"></div>
@@ -314,11 +208,11 @@
                                         <div class="portpost"><a href="single-blog.html"><img src="images/posticon.png" alt="See Post"></a></div>
                                         <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
                                     </li>
-                                    <!-- LATEST BLOG ITEM -->
+                                     LATEST BLOG ITEM 
 
                                 </ul>           
 
-                            </div>         
+                            </div>         -->
 
                         </section>   
                         <!-- LATEST BLOG SECTION --> 
