@@ -1,12 +1,20 @@
 <?php
 include './config/config.php';
 
-$query_slides = "SELECT `slideImageTitle`,`slideImageDescription`, `slideImage` 
+$query_slides = "SELECT `slideImageTitle`,`slideImageDescription`,
+                        `slideImage`, `captionName` 
                    FROM  frontpageslider f
              INNER JOIN caption c
                      ON f.`captionID` = c.`captionID`";
 
 $result_slides = mysqli_query($link, $query_slides) or die(mysqli_error($link));
+
+$query_projects = "SELECT `projectID`, `projectImage`, `projectName`
+                     FROM project
+                 ORDER BY `projectStartDate` DESC
+                    LIMIT 0, 4";
+
+$result_projects = mysqli_query($link, $query_projects) or die(mysqli_error($link));
 ?>
 
 <!doctype html>
@@ -79,24 +87,24 @@ $result_slides = mysqli_query($link, $query_slides) or die(mysqli_error($link));
 
                             <div class="flexslider">
                                 <ul class="slides">
-                                    <?php 
-                                    while ($slide = mysqli_fetch_array($result_slides)) {
-                                      ?>
-                                    
-                                    <li>
-                                        <img src="slider/slide1.jpg" alt="">
-                                        <div class="flex-caption-5">
-
-                                            <h3>Features</h3>
-                                            <p>At vero eos et accusamus et iusto odiodignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similiquesunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est etexpedita distinctio.</p>
-                                            <p><a href="http://themeforest.net/item/lola-responsive-business-html-theme/3223355?ref=UBL" title="Buy This Template">Buy This template</a></p>
-                                        </div>
-                                    </li>
-                                    
                                     <?php
+                                    while ($slide = mysqli_fetch_array($result_slides)) {
+                                        ?>
+
+                                        <li>
+                                            <img src="slider/<?php echo $slide['slideImage'] ?>" alt="">
+                                            <div class="<?php echo $slide['captionName'] ?>">
+
+                                                <h3><?php echo $slide['slideImageTitle']; ?></h3>
+                                                <p><?php echo preg_replace("/\n/", "<br>",$slide['slideImageDescription']); ?></p>
+                                                <!--<p><a href="http://themeforest.net/item/lola-responsive-business-html-theme/3223355?ref=UBL" title="Buy This Template">Buy This template</a></p>-->
+                                            </div>
+                                        </li>
+
+                                        <?php
                                     }
                                     ?>
-                                    
+
                                     <li>
                                         <iframe id="player_1" src="http://player.vimeo.com/video/44300863?api=1&amp;player_id=player_1" width="500" height="281"></iframe>
                                         <div class="flex-caption-2">You can play videos within this slider</div>
@@ -127,36 +135,20 @@ $result_slides = mysqli_query($link, $query_slides) or die(mysqli_error($link));
 
                                 <ul class="latestportfolio_carousel">
                                     <!-- LATEST PORTFOLIO ITEM -->
-                                    <li>
-                                        <a href="details"><img src="images/portfolio/imagedemo.jpg" alt="Just A Marshmallow"></a>
-                                        <div class="clear"></div>
-                                        <div class="portpost"><a href="details"><img src="images/posticon.png" alt="See Post"></a></div>
-                                        <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
-                                    </li>
-                                    <!-- LATEST PORTFOLIO ITEM -->
-                                    <!-- LATEST PORTFOLIO ITEM -->
-                                    <li>
-                                        <a href="details"><img src="images/portfolio/imagedemo.jpg" alt="Stella Theme"></a>
-                                        <div class="clear"></div>
-                                        <div class="portpost"><a href="details"><img src="images/posticon.png" alt="See Post"></a></div>
-                                        <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
-                                    </li>
-                                    <!-- LATEST PORTFOLIO ITEM -->
-                                    <!-- LATEST PORTFOLIO ITEM -->
-                                    <li>
-                                        <a href="details"><img src="images/portfolio/imagedemo.jpg" alt="Havalon Logo Design"></a>
-                                        <div class="clear"></div>
-                                        <div class="portpost"><a href="details"><img src="images/posticon.png" alt="See Post"></a></div>
-                                        <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
-                                    </li>
-                                    <!-- LATEST PORTFOLIO ITEM -->
-                                    <!-- LATEST PORTFOLIO ITEM -->
-                                    <li>
-                                        <a href="details"><img src="images/portfolio/imagedemo.jpg" alt="Moot Wordpress theme"></a>
-                                        <div class="clear"></div>
-                                        <div class="portpost"><a href="details"><img src="images/posticon.png" alt="See Post"></a></div>
-                                        <div class="portplus"><a class="fancyboxnumber" href="images/imagedemo.jpg" title="Nike - Beauty & The Beast"><img src="images/plus.png" alt="Enlarge Image"></a></div>
-                                    </li>
+                                    <?php
+                                    while ($project = mysqli_fetch_array($result_projects)) {
+                                        ?>
+
+                                        <li>
+                                            <a href="details?project=<?php echo $project['projectID']; ?>"><img src="images/portfolio/<?php echo $project['projectImage']; ?>" alt=""></a>
+                                            <div class="clear"></div>
+                                            <div class="portpost"><a href="details?project=<?php echo $project['projectID']; ?>"><img src="images/posticon.png" alt="See Post"></a></div>
+                                            <div class="portplus"><a class="fancyboxnumber" href="images/portfolio/<?php echo $project['projectImage']; ?>" title="<?php echo $project['projectName']; ?>"><img src="images/plus.png" alt="Enlarge Image"></a></div>
+                                        </li>
+
+                                        <?php
+                                    }
+                                    ?>
                                     <!-- LATEST PORTFOLIO ITEM -->
                                 </ul>           
 
