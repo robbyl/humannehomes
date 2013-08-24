@@ -13,9 +13,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                           WHERE event_id = '$id'
                           LIMIT 1";
 
-    $result_attachment = mysql_query($query_attachment) or die(mysql_error());
+    $result_attachment = mysqli_query($link, $query_attachment) or die(mysqli_error());
 
-    $attachment = mysql_fetch_array($result_attachment);
+    $attachment = mysqli_fetch_array($result_attachment);
 
     $attachment_name = $attachment['event_attachment'];
 
@@ -29,7 +29,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $query_events = "DELETE FROM events
                          WHERE event_id = '$id'";
 
-    $result_events = mysql_query($query_events) or die(mysql_error());
+    $result_events = mysqli_query($link, $query_events) or die(mysqli_error());
 
     if ($result_events) {
         info('message', 'Event deleted successfully!');

@@ -63,7 +63,7 @@ $query_news = "INSERT INTO news
                       (nws_title, nws_posted_date, nws_description, nws_attachment, nws_image)
                VALUES ('$title', CURRENT_TIMESTAMP(), '$description', '$file_name', '$image_name')";
 
-$result_news = mysql_query($query_news) or die(mysql_error());
+$result_news = mysqli_query($link, $query_news) or die(mysqli_error());
 
 if ($result_news) {
     info('message', 'News posted successfully!');

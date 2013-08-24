@@ -10,8 +10,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     WHERE staff_id = '$id'
                     LIMIT 1";
 
-    $result_staff = mysql_query($query_staff) or die(mysql_error());
-    $row_staff = mysql_fetch_array($result_staff);
+    $result_staff = mysqli_query($link ,$query_staff) or die(mysqli_error());
+    $row_staff = mysqli_fetch_array($result_staff);
 }
 ?>
 <!DOCTYPE html>

@@ -38,7 +38,7 @@ $query_org = "INSERT INTO staff
                       (staff_title, position, posted_date, staff_image)
                VALUES ('$title', '$position', CURRENT_TIMESTAMP(), '$image_name')";
 
-$result_org = mysql_query($query_org) or die(mysql_error());
+$result_org = mysqli_query($link, $query_org) or die(mysqli_error());
 
 if ($result_org) {
     info('message', 'Staff posted successfully!');

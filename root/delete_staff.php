@@ -13,9 +13,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                           WHERE staff_id = '$id'
                           LIMIT 1";
 
-    $result_image = mysql_query($query_image) or die(mysql_error());
+    $result_image = mysqli_query($link, $query_image) or die(mysqli_error());
 
-    $image = mysql_fetch_array($result_image);
+    $image = mysqli_fetch_array($result_image);
 
     $image_name = $image['staff_image'];
 
@@ -29,7 +29,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $query_staff = "DELETE FROM staff
                          WHERE staff_id = '$id'";
 
-    $result_staff = mysql_query($query_staff) or die(mysql_error());
+    $result_staff = mysqli_query($links, $query_staff) or die(mysqli_error());
 
     if ($result_staff) {
         info('message', 'Staff deleted successfully!');

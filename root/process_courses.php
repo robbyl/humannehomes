@@ -12,7 +12,7 @@ $query_courses = "INSERT INTO courses
                       (course_title, course_posted_date, course_description, duration)
                VALUES ('$title', CURRENT_TIMESTAMP(), '$description', '$duration')";
 
-$result_courses = mysql_query($query_courses) or die(mysql_error());
+$result_courses = mysqli_query($link ,$query_courses) or die(mysqli_error());
 
 if ($result_courses) {
     info('message', 'Course posted successfully!');

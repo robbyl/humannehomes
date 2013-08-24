@@ -64,7 +64,7 @@ $query_news = "INSERT INTO events
                       (event_title, event_posted_date, event_description, event_attachment, event_image)
                VALUES ('$title', CURRENT_TIMESTAMP(), '$description', '$file_name', '$image_name')";
 
-$result_news = mysql_query($query_news) or die(mysql_error());
+$result_news = mysqli_query($link ,$query_news) or die(mysqli_error());
 
 if ($result_news) {
     info('message', 'Event posted successfully!');

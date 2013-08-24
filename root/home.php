@@ -7,34 +7,38 @@ session_commit();
 
 require '../config/config.php';
 
-$query_news = "SELECT * 
-                 FROM news
-             ORDER BY nws_posted_date DESC";
-$result_news = mysql_query($query_news) or die(mysql_error());
+$query_project = "SELECT `projectID`, `projectImage`, `projectName`, `shortDescription`, 
+                         `fullDescription`, `projectStartDate`
+                 FROM project
+             ORDER BY projectStartDate DESC";
+$result_project = mysqli_query($link, $query_project) or die(mysqli_error($link));
 
-$query_evnt = "SELECT * 
-                 FROM events
-             ORDER BY event_posted_date DESC";
-$result_evnt = mysql_query($query_evnt) or die(mysql_error());
+$query_slider = "SELECT `slideID`, `slideImage`, `slideImageTitle`, 
+                         `slideImageDescription`, `captionName`
+                       FROM frontpageslider f
+                 INNER JOIN caption c
+                       ON c.`captionID` = f.`captionID`
+             ORDER BY slideImageTitle DESC";
+$result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
 
-$query_courses = "SELECT * 
-                    FROM courses
-                ORDER BY course_posted_date DESC";
-$result_courses = mysql_query($query_courses) or die(mysql_error());
-
-$query_downloads = "SELECT * 
-                      FROM downloads
-                  ORDER BY dwn_date_uploaded DESC";
-$result_downloads = mysql_query($query_downloads) or die(mysql_error());
-
-$query_staff = "SELECT * 
-                      FROM staff
-                  ORDER BY posted_date DESC";
-$result_staff = mysql_query($query_staff) or die(mysql_error());
-
-$query_gallery = "SELECT * 
-                      FROM gallery";
-$result_gallery = mysql_query($query_gallery) or die(mysql_error());
+//$query_courses = "SELECT * 
+//                    FROM courses
+//                ORDER BY course_posted_date DESC";
+//$result_courses = mysqli_query($link, $query_courses) or die(mysqli_error($link));
+//
+//$query_downloads = "SELECT * 
+//                      FROM downloads
+//                  ORDER BY dwn_date_uploaded DESC";
+//$result_downloads = mysqli_query($link, $query_downloads) or die(mysqli_error($link));
+//
+//$query_staff = "SELECT * 
+//                      FROM staff
+//                  ORDER BY posted_date DESC";
+//$result_staff = mysqli_query($link, $query_staff) or die(mysqli_error($link));
+//
+//$query_gallery = "SELECT * 
+//                      FROM gallery";
+//$result_gallery = mysqli_query($link, $query_gallery) or die(mysqli_error($link));
 ?>
 <!DOCTYPE html>
 <html>
@@ -73,8 +77,8 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                 <div class="tabwrapper">
                     <div class="tabs_links">
                         <ul>
-                            <li><a href="#tab1">Manage News</a></li>
-                            <li><a href="#tab2">Manage Events</a></li>
+                            <li><a href="#tab1">Manage Projects</a></li>
+                            <li><a href="#tab2">Manage slide</a></li>
                             <li><a href="#tab3">Manage Modules</a></li>
                             <li><a  href="#tab4">Manage Downloads</a></li>
                             <li><a href="#tab5">Org Structure</a></li>
@@ -85,8 +89,8 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
 
                     <div class="tab_content" id="tab1" style="display:none" >
                         <div class="root-heading">
-                            <h2 class="label">Manage News</h2>
-                            <button class="post news">Post news</button>
+                            <h2 class="label">Manage Projects</h2>
+                            <button class="post news">Post project</button>
                             <div style="clear: both"></div>
                         </div>
 
@@ -94,26 +98,24 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                             <table class="data-table1" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>Date posted</th>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Attachment</th>
+                                        <th>Project Image</th>
+                                        <th>Project Name</th>
+                                        <th>Short Description</th>
+                                        <th>Full Description</th>
                                         <th>Actions</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    while ($row_news = mysql_fetch_array($result_news)) {
-                                        $posted = date_create($row_news['nws_posted_date']);
-
+                                    while ($row_project = mysqli_fetch_array($result_project)) {
                                         echo '<tr>';
-                                        echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
-                                        echo '<td>' . $row_news['nws_title'] . '</td>';
-                                        echo '<td>' . $row_news['nws_description'] . '</td>';
-                                        echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
-                                        echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '" class="edit-news">Edit</a></td>';
-                                        echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '" onClick="return confirm(\'Are you sure you want to delete this news?\');">Delete</a></td>';
+                                        echo '<td>' . $row_project['projectImage'] . '</td>';
+                                        echo '<td>' . $row_project['projectName'] . '</td>';
+                                        echo '<td>' . $row_project['shortDescription'] . '</td>';
+                                        echo '<td>' . $row_project['fullDescription'] . '</td>';
+                                        echo '<td><a href="edit_news.php?id=' . $row_project['projectID'] . '" class="edit-news">Edit</a></td>';
+                                        echo '<td><a href="delete_news.php?id=' . $row_project['projectID'] . '" onClick="return confirm(\'Are you sure you want to delete this project?\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>
@@ -124,34 +126,34 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                     </div>
                     <div class="tab_content" id="tab2" style="display:none" >
                         <div class="root-heading">
-                            <h2 class="label">Manage Events</h2>
-                            <button class="post events" >Post events</button>
+                            <h2 class="label">Manage Slide show</h2>
+                            <button class="post events" >Post slide show</button>
                             <div style="clear: both"></div>
                         </div>
                         <div class="form-wrapper">
                             <table class="data-table2" border="1" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>Date posted</th>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Attachment</th>
+                                        <th>Slide Image</th>
+                                        <th>Slide Title</th>
+                                        <th>Image Description</th>
+                                        <th>Caption</th>
                                         <th>Actions</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    while ($row_evnt = mysql_fetch_array($result_evnt)) {
-                                        $evnt_posted = date_create($row_evnt['event_posted_date']);
+                                    while ($row_slider = mysqli_fetch_array($result_slider)) {
 
                                         echo '<tr>';
-                                        echo '<td>' . date_format($evnt_posted, 'd M, Y @ H:i') . '</td>';
-                                        echo '<td>' . $row_evnt['event_title'] . '</td>';
-                                        echo '<td>' . $row_evnt['event_description'] . '</td>';
-                                        echo '<td><a href="uploads/docs/' . $row_evnt['event_attachment'] . '">' . $row_evnt['event_attachment'] . '</a></td>';
-                                        echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '" class="edit-events">Edit</a></td>';
-                                        echo '<td><a href="delete_events.php?id=' . $row_evnt['event_id'] . '" onClick="return confirm(\'Are you sure you want to delete this event?\');">Delete</a></td>';
+//                                        echo '<td><img src="uploads/images/' . $row_staff['staff_image'] . '" height="40"/></td>';
+                                        echo '<td><img src="../slider/' . $row_slider['slideImage'] . '" height="40"/></td>';
+                                        echo '<td>' . $row_slider['slideImageTitle'] . '</td>';
+                                        echo '<td>' . $row_slider['slideImageDescription'] . '</td>';
+                                        echo '<td>' . $row_slider['captionName'] . '</td>';
+                                        echo '<td><a href="edit_events.php?id=' . $row_slider['slideID'] . '" class="edit-events">Edit</a></td>';
+                                        echo '<td><a href="delete_events.php?id=' . $row_slider['slideID'] . '" onClick="return confirm(\'Are you sure you want to delete this slide?\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>
@@ -180,7 +182,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                                 </thead>
                                 <tbody>
                                     <?php
-                                    while ($row_courses = mysql_fetch_array($result_courses)) {
+                                    while ($row_courses = mysqli_fetch_array($result_courses)) {
                                         $course_posted = date_create($row_courses['course_posted_date']);
 
                                         echo '<tr>';
@@ -218,7 +220,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                                 </thead>
                                 <tbody>
                                     <?php
-                                    while ($row_download = mysql_fetch_array($result_downloads)) {
+                                    while ($row_download = mysqli_fetch_array($result_downloads)) {
                                         $posted = date_create($row_download['dwn_date_uploaded']);
 
                                         echo '<tr>';
@@ -256,7 +258,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                                 </thead>
                                 <tbody>
                                     <?php
-                                    while ($row_staff = mysql_fetch_array($result_staff)) {
+                                    while ($row_staff = mysqli_fetch_array($result_staff)) {
                                         $posted_date = date_create($row_staff['posted_date']);
 
                                         echo '<tr>';
@@ -291,7 +293,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                                 </thead>
                                 <tbody>
                                     <?php
-                                    while ($row_gallery = mysql_fetch_array($result_gallery)) {
+                                    while ($row_gallery = mysqli_fetch_array($result_gallery)) {
 
                                         echo '<tr>';
                                         echo '<td><img src="uploads/images/gallery/' . $row_gallery['photo_name'] . '" height="40"/></td>';

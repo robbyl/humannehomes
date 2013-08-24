@@ -36,7 +36,7 @@ if ($news_image !== $image_name && !empty($image_name)) {
                                SET nws_image = '$image_name'
                              WHERE nws_id = '$id'";
 
-            $result_image = mysql_query($query_image) or die(mysql_error());
+            $result_image = mysqli_query($link ,$query_image) or die(mysqli_error());
         }
     } else {
 
@@ -72,7 +72,7 @@ if ($news_attachment !== $attachment_name && !empty($attachment_name)) {
                                  SET nws_attachment = '$attachment_name'
                                WHERE nws_id = '$id'";
 
-            $result_attachment = mysql_query($query_attachment) or die(mysql_error());
+            $result_attachment = mysqli_query($link ,$query_attachment) or die(mysqli_error());
         }
     } else {
 
@@ -87,7 +87,7 @@ $query_news = "UPDATE news
                       nws_description = '$news_description'
                 WHERE nws_id = '$id'";
 
-$result_news = mysql_query($query_news) or die(mysql_error());
+$result_news = mysqli_query($link ,$query_news) or die(mysqli_error());
 
 if ($result_news) {
     info('message', 'News updated successfully!');

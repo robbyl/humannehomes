@@ -33,7 +33,7 @@ if ($photo_name !== $image_name && !empty($image_name)) {
                                SET photo_name = '$image_name'
                              WHERE photo_id = '$id'";
 
-            $result_image = mysql_query($query_image) or die(mysql_error());
+            $result_image = mysqli_query($link, $query_image) or die(mysqli_error());
         }
     } else {
 
@@ -47,7 +47,7 @@ $query_news = "UPDATE gallery
                   SET photo_description = '$photo_description'
                 WHERE photo_id = '$id'";
 
-$result_news = mysql_query($query_news) or die(mysql_error());
+$result_news = mysqli_query($link ,$query_news) or die(mysqli_error());
 
 if ($result_news) {
     info('message', 'Photo updated successfully!');

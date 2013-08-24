@@ -36,7 +36,7 @@ if ($event_image !== $event_image && !empty($event_image)) {
                                SET event_image = '$image_name'
                              WHERE event_id = '$id'";
 
-            $result_image = mysql_query($query_image) or die(mysql_error());
+            $result_image = mysqli_query($link, $query_image) or die(mysqli_error());
         }
     } else {
 
@@ -72,7 +72,7 @@ if ($event_attachment !== $attachment_name && !empty($attachment_name)) {
                                  SET event_attachment = '$attachment_name'
                                WHERE event_id = '$id'";
 
-            $result_attachment = mysql_query($query_attachment) or die(mysql_error());
+            $result_attachment = mysqli_query($link, $query_attachment) or die(mysqli_error());
         }
     } else {
 
@@ -87,7 +87,7 @@ $query_events = "UPDATE events
                       event_description = '$event_description'
                 WHERE event_id = '$id'";
 
-$result_events = mysql_query($query_events) or die(mysql_error());
+$result_events = mysqli_query($link ,$query_events) or die(mysqli_error());
 if ($result_events) {
     info('message', 'Event updated successfully!');
     header("Location: home.php#tab2");

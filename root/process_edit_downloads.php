@@ -33,7 +33,7 @@ if ($dwn_attachment !== $file_name && !empty($file_name)) {
                                  SET dwn_file_name = '$file_name'
                                WHERE dwn_id = '$id'";
 
-            $result_dwn = mysql_query($query_dwn) or die(mysql_error());
+            $result_dwn = mysqli_query($link ,$query_dwn) or die(mysqli_error());
         }
     } else {
 
@@ -48,7 +48,7 @@ $query_downloads = "UPDATE downloads
                        dwn_date_uploaded = CURRENT_TIMESTAMP()
                    WHERE dwn_id = '$id'";
 
-$result_downloads = mysql_query($query_downloads) or die(mysql_error());
+$result_downloads = mysqli_query($link ,$query_downloads) or die(mysqli_error());
 
 if ($result_downloads) {
     info('message', 'File updated successfully!');

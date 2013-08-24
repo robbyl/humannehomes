@@ -10,15 +10,15 @@ $query_user = "SELECT user_id, username, password
                  FROM user
                 WHERE username = '$username' AND password = '$password' ";
 
-$result_user = mysql_query($query_user) or die(mysql_error());
-$row_user = mysql_fetch_array($result_user);
+$result_user = mysqli_query($link, $query_user) or die(mysqli_error($link));
+$row_user = mysqli_fetch_array($result_user);
 
-$num_row = mysql_num_rows($result_user);
+$num_row = mysqli_num_rows($result_user);
 
 if ($num_row === 1) {
 
     // Login successfully
-    mysql_close($conn);
+    mysqli_close($conn);
     session_start();
     $_SESSION['username'] = $row_user['username'];
     $_SESSION['user_id'] = $row_user['user_id'];

@@ -10,9 +10,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     WHERE event_id = '$id'
                     LIMIT 1";
 
-    $result_events = mysql_query($query_events) or die(mysql_error());
+    $result_events = mysqli_query($link, $query_events) or die(mysqli_error());
 
-    $row_events = mysql_fetch_array($result_events);
+    $row_events = mysqli_fetch_array($result_events);
 }
 ?>
 <!DOCTYPE html>

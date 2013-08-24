@@ -15,8 +15,8 @@ $query_currpass = "SELECT user_id, password
                     WHERE user_id = $user_id
                       AND password = '$curr_pass'";
 
-$result_currpass = mysql_query($query_currpass) or die(mysql_error());
-$num_currpass = mysql_num_rows($result_currpass);
+$result_currpass = mysqli_query($link, $query_currpass) or die(mysqli_error());
+$num_currpass = mysqli_num_rows($result_currpass);
 
 if ($num_currpass === 1) {
 
@@ -27,7 +27,7 @@ if ($num_currpass === 1) {
                         SET password = '$new_pass'
                       WHERE user_id = '$user_id'";
 
-    $result_newpass = mysql_query($query_newpass) or die();
+    $result_newpass = mysqli_query($link, $query_newpass) or die();
 
     if ($result_newpass) {
 

@@ -13,9 +13,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                           WHERE dwn_id = '$id'
                           LIMIT 1";
 
-    $result_attachment = mysql_query($query_attachment) or die(mysql_error());
+    $result_attachment = mysqli_query($link, $query_attachment) or die(mysqli_error());
 
-    $attachment = mysql_fetch_array($result_attachment);
+    $attachment = mysqli_fetch_array($result_attachment);
 
     $attachment_name = $attachment['dwn_file_name'];
 
@@ -29,7 +29,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $query_downloads = "DELETE FROM downloads
                          WHERE dwn_id = '$id'";
 
-    $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
+    $result_donwloads = mysqli_query($link, $query_downloads) or die(mysqli_error());
 
     if ($result_donwloads) {
         info('message', 'Download deleted successfully!');
