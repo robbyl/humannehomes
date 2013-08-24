@@ -80,8 +80,9 @@ $result_slides = mysqli_query($link, $query_slides) or die(mysqli_error($link));
                             <div class="flexslider">
                                 <ul class="slides">
                                     <?php 
-                                    whi
-                                    ?>
+                                    while ($slide = mysqli_fetch_array($result_slides)) {
+                                      ?>
+                                    
                                     <li>
                                         <img src="slider/slide1.jpg" alt="">
                                         <div class="flex-caption-5">
@@ -91,6 +92,11 @@ $result_slides = mysqli_query($link, $query_slides) or die(mysqli_error($link));
                                             <p><a href="http://themeforest.net/item/lola-responsive-business-html-theme/3223355?ref=UBL" title="Buy This Template">Buy This template</a></p>
                                         </div>
                                     </li>
+                                    
+                                    <?php
+                                    }
+                                    ?>
+                                    
                                     <li>
                                         <iframe id="player_1" src="http://player.vimeo.com/video/44300863?api=1&amp;player_id=player_1" width="500" height="281"></iframe>
                                         <div class="flex-caption-2">You can play videos within this slider</div>
