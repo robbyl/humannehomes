@@ -5,12 +5,19 @@ require './functions/general_functions.php';
 $projectID = empty($_GET['project']) ? '' : clean($_GET['project']);
 
 $query_projects = "SELECT `projectID`, `projectName`, `projectImage`, `fullDescription`
-                     FROM project
-                    WHERE `projectID` = '$projectID'";
+                     FROM project";
 
 $result_projects = mysqli_query($link, $query_projects) or die(mysqli_error($link));
 
-$project = mysqli_fetch_array($result_projects);
+while ($projects = mysqli_fetch_array($result_projects)) {
+    $project[$projects['projectID']] = $projects;
+    $number[] = $projects['projectID'];
+}
+
+$key = array_search($projectID, $number); 
+
+$numberKeys = array_keys($number);
+
 ?>
 <!doctype html>
 <html>
@@ -61,7 +68,7 @@ $project = mysqli_fetch_array($result_projects);
         <!-- DROPDOWN MESSAGE SECTION -->
 
         <!-- SOCIAL MEDIA BUTTONS SECTION -->
-<?php include './includes/socialmedia_buttons.php'; ?>
+        <?php include './includes/socialmedia_buttons.php'; ?>
 
         <div class="clear"></div>
         <!-- SOCIAL MEDIA BUTTONS SECTION -->
@@ -76,14 +83,14 @@ $project = mysqli_fetch_array($result_projects);
                 <section class="main_section">
 
                     <!-- HEADER SECTION -->
-<?php include './includes/header.php'; ?>
+                    <?php include './includes/header.php'; ?>
 
                     <div class="clear"></div>
                     <!-- HEADER SECTION -->
                     <!-- PAGE TITLE SECTION -->
                     <section class="mainpage_title">
 
-                        <h1><?php echo $project['projectName']; ?></h1>
+                        <h1><?php echo $project[$projectID]['projectName']; ?></h1>
 
                     </section>
                     <!-- PAGE TITLE SECTION -->         
@@ -94,7 +101,7 @@ $project = mysqli_fetch_array($result_projects);
                             <!-- WIDGET -->
                             <div class="widget">
 
-                                <p><a href="#" title="previous" class="portfoliolink">PREV</a>  <a style="float: right" href="#" title="Next" class="portfoliolink">NEXT</a></p>
+                                <p><a href="<?php echo in_array($key - 1, $numberKeys) ?  'details?project=' . $number[$key - 1] :  '#'; ?>" title="previous" class="portfoliolink">PREV</a>  <a style="float: right" href="<?php echo in_array($key + 1, $numberKeys) ?  'details?project=' . $number[$key + 1] :  '#'; ?>" title="Next" class="portfoliolink">NEXT</a></p>
 
                             </div>
                             <!-- WIDGET -->
@@ -103,7 +110,7 @@ $project = mysqli_fetch_array($result_projects);
                             <div class="widget">
 
                                 <h3>Project overview</h3>
-                                <p><?php echo preg_replace("/\n/", "<br>", $project['fullDescription']); ?></p> 
+                                <p><?php echo preg_replace("/\n/", "<br>", $project[$projectID]['fullDescription']); ?></p> 
                             </div>
                             <!-- WIDGET -->
                             <!-- WIDGET -->
@@ -131,7 +138,7 @@ $project = mysqli_fetch_array($result_projects);
                             <div class="blog_item_wrap">
 
                                 <!-- IMAGE -->
-                                <div class="blogitem_image_alt"><img src="images/portfolio/<?php echo $project['projectImage']; ?>" alt=""></div>
+                                <div class="blogitem_image_alt"><img src="images/portfolio/<?php echo $project[$projectID]['projectImage']; ?>" alt=""></div>
                                 <!-- IMAGE -->
 
                             </div>
@@ -152,11 +159,11 @@ $project = mysqli_fetch_array($result_projects);
         <!-- HEADER AND MAIN SECTION -->
 
         <!-- FOOTER WIDGET SECTION -->
-<?php include './includes/footerwidget_area.php'; ?>
+        <?php include './includes/footerwidget_area.php'; ?>
         <!-- FOOTER WIDGET SECTION -->
         <div class="clear"></div>
         <!-- FOOTER SECTION -->
-<?php include './includes/footer.php'; ?>
+        <?php include './includes/footer.php'; ?>
         <!-- FOOTER SECTION -->
 
         <!-- BACK TO TOP BUTTON -->
