@@ -1,4 +1,4 @@
-
+<?php require_once '../config/config.php';?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,9 +24,13 @@
                             <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
+                            <td style="vertical-align: top">Slide Description*</td>
+                            <td><textarea name="description" required></textarea></td>
+                        </tr>
+                        <tr>
                             <td>Caption* <div class="file-types">(pdf, doc, docx)</div></td>
                             <td>
-                                <select name="captionID" class="select" required="">
+                                <select name="captionID" required="">
                                         <option value="" disabled="" selected="" style="display:none;"></option>
                                         <?php
                                         $query_caption = "SELECT `captionID`, `captionName`  FROM caption  ORDER BY `captionName` ASC";
@@ -40,10 +44,7 @@
                                     </select>
                             </td>
                         </tr>
-                        <tr>
-                            <td style="vertical-align: top">Slide Description*</td>
-                            <td><textarea name="description" required></textarea></td>
-                        </tr>
+                        
                     </table>
                 </form>
                 <div class="pop-up-footer">
