@@ -20,9 +20,7 @@ body {
 }
 
 #bg {
-    background-image: url("../../images/bubble.png");
-    background-position: 50% 0%;
-    background-repeat: repeat-x;
+    background: url("../../images/backgrounds/white_brick_wall.png") repeat;
 }
 
 .login-wrapper {
@@ -44,7 +42,7 @@ body {
     font-size: 30px;
     border: 1px solid #fff;
     background: url(../images/) no-repeat 20px center;
-    background-color: #0086B2;
+    background-color: #559563;
     margin-bottom: 55px;
 }
 
