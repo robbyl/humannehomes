@@ -334,62 +334,11 @@
         <!-- HEADER AND MAIN SECTION -->
 
         <!-- FOOTER WIDGET SECTION -->
-        <section class="footerwidget_area">
-
-            <div class="footer_widget_container">
-
-                <!-- WIDGET -->
-                <div class="widget">
-
-                    <h3>Pages</h3>
-
-                    <ul>
-
-                        <li><a href="page1.html" title="Page Version 1">Page Layout 1</a></li>
-                        <li><a href="page2.html" title="Page Version 2">Page Layout 2</a></li>
-                        <li><a href="page3.html" title="Full Page Version">Full Page Layout</a></li>
-                        <li><a href="page4.html" title="Typography &amp; Layouts">Typography &amp; Grids</a></li>
-                        <li><a href="page5.html" title="Icons &amp; Buttons">Icons, Buttons &amp; Images</a></li>
-                        <li><a href="page6.html" title="Tabs &amp; Accordions">Tabs, Accordions &amp; Lists</a></li>
-                        <li><a href="page7.html" title="Theme Tables">Theme Tables</a></li>
-
-                    </ul>
-
-                </div>
-                <!-- WIDGET -->
-                <!-- WIDGET -->
-                <div class="widget">
-
-                    <h3>Flickr Feed</h3>
-
-                    <ul id="flickr"></ul>
-
-                </div>
-                <!-- WIDGET -->
-                <!-- WIDGET -->
-                <div class="widget">
-
-                    <h3>Latest Tweets</h3>
-
-                    <div class="twitterbody"></div>
-
-                </div>
-                <!-- WIDGET -->
-
-            </div>
-
-        </section>
+        <?php include'./includes/footerwidget_area.php' ?>
         <!-- FOOTER WIDGET SECTION -->
         <div class="clear"></div>
         <!-- FOOTER SECTION -->
-        <footer class="footer">
-
-            &copy; 2012 - UBL Designs, All rights reserved!&nbsp; -  
-            <!-- DO NOT REMOVE, IF FOUND TO BE REMOVED DMCA TAKE DOWN NOTICE WILL BE PROVIDED TO SHUT YOUR HOSTING DOWN, TO YOUR HOSTING PROVIDER -->
-            <a href="http://www.derby-web-design-agency.co.uk" title="Template by UBL Designs">Template By UBL Designs</a>
-            <!-- DO NOT REMOVE, IF FOUND TO BE REMOVED DMCA TAKE DOWN NOTICE WILL BE PROVIDED TO SHUT YOUR HOSTING DOWN, TO YOUR HOSTING PROVIDER -->
-
-        </footer>
+        <?php include './includes/footer.php'; ?>
         <!-- FOOTER SECTION -->
 
         <!-- BACK TO TOP BUTTON -->
