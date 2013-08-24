@@ -27,7 +27,6 @@
 <script src="js/jquery.easing.js"></script>
 <script src="js/jquery.mousewheel.js"></script> 
 <script src="js/custom.js"></script>
-<script src="js/contact.js"></script>
 <!-- JAVASCRIPT SECTION -->
 </head>
 
@@ -55,56 +54,58 @@
 
 <!-- HEADER AND MAIN SECTION -->
 <div class="mainbg background2">
+	
     <!-- CONTAINER -->
     <div class="maincontainer">
+        
         <!-- MAIN SECTION -->
-        <section class="main_section contactpage">
+        <section class="main_section">
         
         	<!-- HEADER SECTION -->
             <?php include './includes/header.php'; ?>
                 
             <div class="clear"></div>
-            
-            <!-- GOOGLE SECTION -->
-            <section id="googlewrapping">
-            
-                <div id="googlewrap"></div>
-            
-            </section>
-            <!-- GOOGLE SECTION -->
             <!-- HEADER SECTION -->
         	<!-- PAGE TITLE SECTION -->
             <section class="mainpage_title">
             
-                <h1>Say Hello!</h1>
+                <h1>At vero eos et accusamus et iusto odiodignissimos</h1>
                 
             </section>
-			<!-- PAGE TITLE SECTION --> 
+			<!-- PAGE TITLE SECTION -->         
         	<div class="container">
             <!-- SIDEBAR SECTION -->
             <div class="sidebararea floatright">
-                <!-- WIDGET -->
+            
+            	<!-- WIDGET -->
                 <div class="widget">
                 
-                	<h3>Address</h3>
-                      
-                	<p>HUMANNE HOMES ( T ) LTD.,<br>P.O.Box 1545,<br>Dar es Salaam,<br>Tanzania.</p>
+                	<p><a href="#" title="previous" class="portfoliolink">PREV</a> <a href="#" title="Visit Website" class="portfoliolink">VISIT WEBSITE</a> <a href="#" title="Next" class="portfoliolink">NEXT</a></p>
                 
                 </div>
                 <!-- WIDGET -->
-              <!-- WIDGET -->
+                
+                <!-- WIDGET -->
                 <div class="widget">
                 
-                	<h3>Contact Details</h3>
+                	<h3>Project overview</h3>
                            
+                	<p>At vero eos et accusamus et iusto odiodignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similiquesunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est etexpedita distinctio.</p>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+                </div>
+                <!-- WIDGET -->
+                <!-- WIDGET -->
+                <div class="widget">
+                
+                	<h3>Technology</h3>
+                      
                 	<ul>
                     
-                   	  <li>Tel: +255 22 2864343</li>
-                   	  <li>Mobile: +255 784 248 227</li>
-                      <li>Email: info@humannehomes.com</li>
-                      <li>Twitter: <a href="#" title="Join Us On Twitter">@Humannehomes</a></li>
-                      <li>Facebook: <a href="#" title="Join Us On Facebook">Humannehomes</a></li>
-                      <li>Linked In: <a href="#" title="Join Us On Linked In">Humannehomes</a></li>
+                    	<li><a href="#" title="At vero eos et accusamus et iusto">Adobe Photoshop</a></li>
+                        <li><a href="#" title="Temporibus autem quibusdam et aut">Adobe Illustrator</a></li>
+                        <li><a href="#" title="Lorem ipsum dolor sit amet">Notepad++</a></li>
                     
                     </ul>
                 
@@ -116,25 +117,16 @@
             <!-- MAIN CONTENT SECTION -->
             <div class="contentarea floatleft">
             
-            <!-- COMMENT FORM -->
-            <div class="messagearea">
-                
-                <p>At vero eos et accusamus et iusto odiodignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similiquesunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est etexpedita distinctio.</p>
-                <form method="post" id="slickform" action="javascript:slickcontactparse();">
-                <fieldset>
-                    <p><label>Name</label><br>
-                    <input type="text" class="commentinput" name="name" id="name"></p>
-                    <p><label>email</label><br>
-                    <input type="text" class="commentinput" name="email" id="email"></p>
-                    <p><label>Comment</label><br>
-                    <textarea class="commenttextarea" name="commentarea" id="commentarea"></textarea></p>
-                    <p><input type="submit" class="widgetinputbutton"></p>
-                </fieldset>
-                </form>
-            	<p class="contactmessage"></p>
+            <!-- ITEM -->
+            <div class="blog_item_wrap">
+
+                <!-- IMAGE -->
+                <div class="blogitem_image_alt"><img src="images/imagedemo.jpg" alt="Blog Image 1"></div>
+                <!-- IMAGE -->
             
             </div>
-            <!-- COMMENT FORM -->
+            <!-- ITEM -->
+            
             </div>
             <!-- MAIN CONTENT SECTION -->
             </div> 

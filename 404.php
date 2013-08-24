@@ -27,7 +27,6 @@
 <script src="js/jquery.easing.js"></script>
 <script src="js/jquery.mousewheel.js"></script> 
 <script src="js/custom.js"></script>
-<script src="js/contact.js"></script>
 <!-- JAVASCRIPT SECTION -->
 </head>
 
@@ -55,28 +54,21 @@
 
 <!-- HEADER AND MAIN SECTION -->
 <div class="mainbg background2">
+	
     <!-- CONTAINER -->
     <div class="maincontainer">
-        <!-- MAIN SECTION -->
-        <section class="main_section contactpage">
         
+        <!-- MAIN SECTION -->
+        <section class="main_section">
         	<!-- HEADER SECTION -->
             <?php include './includes/header.php'; ?>
                 
             <div class="clear"></div>
-            
-            <!-- GOOGLE SECTION -->
-            <section id="googlewrapping">
-            
-                <div id="googlewrap"></div>
-            
-            </section>
-            <!-- GOOGLE SECTION -->
             <!-- HEADER SECTION -->
         	<!-- PAGE TITLE SECTION -->
             <section class="mainpage_title">
             
-                <h1>Say Hello!</h1>
+                <h1>ERROR <span>404!</span> - PAGE NOT FOUND!</h1>
                 
             </section>
 			<!-- PAGE TITLE SECTION --> 
@@ -86,25 +78,29 @@
                 <!-- WIDGET -->
                 <div class="widget">
                 
-                	<h3>Address</h3>
-                      
-                	<p>HUMANNE HOMES ( T ) LTD.,<br>P.O.Box 1545,<br>Dar es Salaam,<br>Tanzania.</p>
+                        <form action="#" method="post">
+                        
+                            <input type="text" class="widgetinput" value="your@emailhere.com"><input type="submit" class="widgetinputbutton">
+                        
+                        </form>
                 
                 </div>
                 <!-- WIDGET -->
-              <!-- WIDGET -->
+                <!-- WIDGET -->
                 <div class="widget">
                 
-                	<h3>Contact Details</h3>
+                	<h3>Pages</h3>
                            
                 	<ul>
                     
-                   	  <li>Tel: +255 22 2864343</li>
-                   	  <li>Mobile: +255 784 248 227</li>
-                      <li>Email: info@humannehomes.com</li>
-                      <li>Twitter: <a href="#" title="Join Us On Twitter">@Humannehomes</a></li>
-                      <li>Facebook: <a href="#" title="Join Us On Facebook">Humannehomes</a></li>
-                      <li>Linked In: <a href="#" title="Join Us On Linked In">Humannehomes</a></li>
+                    	<li><a href="page1.html" title="Page Version 1">Page Layout 1</a></li>
+                        <li><a href="page2.html" title="Page Version 2">Page Layout 2</a></li>
+                        <li><a href="page3.html" title="Full Page Version">Full Page Layout</a></li>
+                        <li><a href="page4.html" title="Typography &amp; Layouts">Typography &amp; Grids</a></li>
+                        <li><a href="page5.html" title="Icons &amp; Buttons">Icons, Buttons &amp; Images</a></li>
+                        <li><a href="page6.html" title="Tabs &amp; Accordions">Tabs, Accordions &amp; Lists</a></li>
+                        <li><a href="page7.html" title="Theme Tables">Theme Tables</a></li>
+                        <li><a href="page8.html" title="404 Error Page">404 Error Page</a></li>
                     
                     </ul>
                 
@@ -115,26 +111,13 @@
             <!-- SIDEBAR SECTION -->
             <!-- MAIN CONTENT SECTION -->
             <div class="contentarea floatleft">
-            
-            <!-- COMMENT FORM -->
-            <div class="messagearea">
+				
+                <p>Sorry the page you are trying to reach can not be found!</p>
                 
-                <p>At vero eos et accusamus et iusto odiodignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similiquesunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est etexpedita distinctio.</p>
-                <form method="post" id="slickform" action="javascript:slickcontactparse();">
-                <fieldset>
-                    <p><label>Name</label><br>
-                    <input type="text" class="commentinput" name="name" id="name"></p>
-                    <p><label>email</label><br>
-                    <input type="text" class="commentinput" name="email" id="email"></p>
-                    <p><label>Comment</label><br>
-                    <textarea class="commenttextarea" name="commentarea" id="commentarea"></textarea></p>
-                    <p><input type="submit" class="widgetinputbutton"></p>
-                </fieldset>
-                </form>
-            	<p class="contactmessage"></p>
-            
-            </div>
-            <!-- COMMENT FORM -->
+                <p>Either the page was moved or the url you have entered is incorrect.</p>
+                
+                <p>Please use the navigation or the search box to your right to find what you are looking for!</p>
+                
             </div>
             <!-- MAIN CONTENT SECTION -->
             </div> 
