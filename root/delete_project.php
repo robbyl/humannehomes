@@ -17,11 +17,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $image = mysqli_fetch_array($result_project);
 
-    $image_name = $image['slideImage'];
+    $image_name = $image['projectImage'];
 
     // Obtaining download file path
     $image_path = '../images/portfolio/' . $image_name;
-
 
     // Deleting download file.
     unlink($image_path);
@@ -33,13 +32,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($result_project) {
         info('message', 'Project deleted successfully!');
-        header('Location: home.php#tab2');
+        header('Location: home.php#tab1');
     } else {
         info('error', 'Cannot delete project');
-        header('Location: home.php#tab2');
+        header('Location: home.php#tab1');
     }
 } else {
     info('error', 'Invalid project id');
-    header('Location: home.php#tab2');
+    header('Location: home.php#tab1');
 }
 ?>

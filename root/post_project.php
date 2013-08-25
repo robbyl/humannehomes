@@ -30,7 +30,7 @@
                         </tr>
                         <tr>
                             <td>Project Image* <div class="file-types">(jpeg, png, gif)</div></td>
-                            <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                            <td><input type="file" name="image" required="" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
                             <td>Project Category*</td>

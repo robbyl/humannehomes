@@ -1,5 +1,5 @@
 <?php
-
+require '../config/config.php';
 require '../functions/general_functions.php';
 
 $title = clean($_POST['title']);
@@ -58,8 +58,6 @@ if (!empty($image_name)) {
 //    header('Location: home.php#tab2');
 //    exit(0);
 //}
-
-require '../config/config.php';
 
 $query_slide = "INSERT INTO frontpageslider
                       (`slideImageTitle`, `slideImage`,`captionID`, `slideImageDescription`)

@@ -34,7 +34,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 <p class="dscptn">* Indicates this field is required.</p>
                 <form class="pop-up-form" id="news-form" action="process_edit_project.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $row_project['projectID'] ?>" />
-                    <input type="hidden" name="projectImage" value="<?php echo $row_news['projectImage'] ?>" />
+                    <input type="hidden" name="projectImage" value="<?php echo $row_project['projectImage'] ?>" />
                     <table border="0" width="100%">
                         <tr>
                             <td width="250">Project Name*</td>
@@ -72,11 +72,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         </tr>
                         <tr>
                             <td style="vertical-align: top">Short Description*</td>
-                            <td><textarea name="shortdescription" required style="min-height: 40px"><?php echo $row_project['shortDescription']; ?></textarea></td>
+                            <td><textarea name="shortDescription" required style="min-height: 40px"><?php echo $row_project['shortDescription']; ?></textarea></td>
                         </tr>
                         <tr>
                             <td style="vertical-align: top">Full Description*</td>
-                            <td><textarea name="fulldescription" required><?php echo $row_project['fullDescription']; ?></textarea></td>
+                            <td><textarea name="fullDescription" required><?php echo $row_project['fullDescription']; ?></textarea></td>
                         </tr>
                     </table>
                 </form>
