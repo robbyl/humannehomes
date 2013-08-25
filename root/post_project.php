@@ -1,3 +1,4 @@
+<?php require_once '../config/config.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,6 +23,24 @@
                             <td>Project Image <div class="file-types">(jpeg, png, gif)</div></td>
                             <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
+                        <tr>
+                            <td>Project Category</td>
+                            <td>
+                                <select name="projectCategoryID" required="" style="width: 512px">
+                                    <option value="" disabled="" selected="" style="display:none;"></option>
+                                    <?php
+                                    $query_caption = "SELECT `projectCategoryID`,`projectCategory` FROM projectcategory  ORDER BY projectCategory ASC";
+                                    $result_caption = mysqli_query($link, $query_caption) or die(mysqli_error($link));
+                                    while ($row_caption = mysqli_fetch_array($result_caption)) {
+                                        ?>
+                                        <option value="<?php echo $row_caption['captionID'] ?>"><?php echo $row_caption['captionName'] ?></option>
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+                            </td>
+                        </tr>
+
                         <tr>
                             <td style="vertical-align: top">Short Description*</td>
                             <td><textarea name="shortdescription" required style="min-height: 40px"></textarea></td>
