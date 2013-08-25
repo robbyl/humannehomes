@@ -7,39 +7,39 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $id = clean($_GET['id']);
 
-    // Obtaining news attachment name according to the given id
-    $query_attachment = "SELECT nws_attachment
-                           FROM news
-                          WHERE nws_id = '$id'
-                          LIMIT 1";
+    // Obtaining download file name according to the given id
+    $query_project = "SELECT `projectImage`
+                      FROM project
+                     WHERE `projectID` = '$id'
+                     LIMIT 1";
 
-    $result_attachment = mysqli_query($links, $query_attachment) or die(mysqli_error());
+    $result_project = mysqli_query($link, $query_project) or die(mysqli_error($link));
 
-    $attachment = mysqli_fetch_array($result_attachment);
+    $image = mysqli_fetch_array($result_project);
 
-    $attachment_name = $attachment['nws_attachment'];
+    $image_name = $image['slideImage'];
 
-    // Obtaining news attachment path
-    $attachment_path = 'uploads/docs/' . $attachment_name;
+    // Obtaining download file path
+    $image_path = '../images/portfolio/' . $image_name;
 
-    // Deleting news attachment file.
-    unlink($attachment_path);
 
-    // Deleting news detail in the database.
-    $query_news = "DELETE FROM news
-                         WHERE nws_id = '$id'";
+    // Deleting download file.
+    unlink($image_path);
 
-    $result_news = mysqli_query($links, $query_news) or die(mysqli_error());
+    $query_project = "DELETE FROM project
+                         WHERE `projectID` = '$id'";
 
-    if ($result_news) {
-        info('message', 'News deleted successfully!');
-        header('Location: home.php');
+    $result_project = mysqli_query($link, $query_project) or die(mysqli_error($link));
+
+    if ($result_project) {
+        info('message', 'Project deleted successfully!');
+        header('Location: home.php#tab2');
     } else {
-        info('error', 'Cannot delete news');
-        header('Location: home.php');
+        info('error', 'Cannot delete project');
+        header('Location: home.php#tab2');
     }
 } else {
-    info('error', 'Invalid news id');
-    header('Location: home.php');
+    info('error', 'Invalid project id');
+    header('Location: home.php#tab2');
 }
 ?>
