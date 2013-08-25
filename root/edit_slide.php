@@ -5,14 +5,14 @@ require '../functions/general_functions.php';
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = clean($_GET['id']);
 
-    $query_events = "SELECT *
-                     FROM events
+    $query_slide = "SELECT *
+                     FROM frontpageslider
                     WHERE event_id = '$id'
                     LIMIT 1";
 
-    $result_events = mysqli_query($link, $query_events) or die(mysqli_error());
+    $result_slide = mysqli_query($link, $query_slide) or die(mysqli_error($link));
 
-    $row_events = mysqli_fetch_array($result_events);
+    $row_slide = mysqli_fetch_array($result_slide);
 }
 ?>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <body>
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
-                <div class="pop-up-header">Edit events<div class="close"></div></div>
+                <div class="pop-up-header">Edit slide<div class="close"></div></div>
                 <p class="dscptn">* Indicates this field is required.</p>
                 <form class="pop-up-form" id="events-form" action="process_edit_events.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $row_events['event_id'] ?>" />
