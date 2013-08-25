@@ -33,7 +33,7 @@
                             <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td>Project Category</td>
+                            <td>Project Category*</td>
                             <td>
                                 <select name="projectCategoryID" class="text" required="" style="width: 470px; height: 28px;">
                                     <option value="" disabled="" selected="" style="display:none;"></option>
@@ -51,7 +51,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td width="170">Project Start Date:<sup class="required-field">*</sup></td>
+                            <td width="170">Project Start Date*<sup class="required-field">*</sup></td>
                             <td>
                                 <input type="date" name="projectStartDate" id="departureDate" required value="<?php echo date('Y-m-d') ?>" class="text" style="width: 500px; margin-right: 10px; font-family: inherit;">
 

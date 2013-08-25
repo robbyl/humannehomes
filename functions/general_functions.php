@@ -2,7 +2,8 @@
 
 // Clean user input data
 function clean($string) {
-    $cleaned_string = mysql_real_escape_string($string);
+    global $link;
+    $cleaned_string = mysqli_real_escape_string($link, $string);
     return trim($cleaned_string);
 }
 
