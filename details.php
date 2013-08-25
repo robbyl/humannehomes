@@ -14,10 +14,15 @@ while ($projects = mysqli_fetch_array($result_projects)) {
     $number[] = $projects['projectID'];
 }
 
-$key = array_search($projectID, $number); 
+if (mysqli_num_rows($result_projects) <= 0 || !in_array($projectID, array_keys($project))) {
+    
+    header('Location: 404');
+    exit;
+}
+
+$key = array_search($projectID, $number);
 
 $numberKeys = array_keys($number);
-
 ?>
 <!doctype html>
 <html>
@@ -101,7 +106,7 @@ $numberKeys = array_keys($number);
                             <!-- WIDGET -->
                             <div class="widget">
 
-                                <p><a href="<?php echo in_array($key - 1, $numberKeys) ?  'details?project=' . $number[$key - 1] :  '#'; ?>" title="previous" class="portfoliolink">PREV</a>  <a style="float: right" href="<?php echo in_array($key + 1, $numberKeys) ?  'details?project=' . $number[$key + 1] :  '#'; ?>" title="Next" class="portfoliolink">NEXT</a></p>
+                                <p><a href="<?php echo in_array($key - 1, $numberKeys) ? 'details?project=' . $number[$key - 1] : '#'; ?>" title="previous" class="portfoliolink">PREV</a>  <a style="float: right" href="<?php echo in_array($key + 1, $numberKeys) ? 'details?project=' . $number[$key + 1] : '#'; ?>" title="Next" class="portfoliolink">NEXT</a></p>
 
                             </div>
                             <!-- WIDGET -->

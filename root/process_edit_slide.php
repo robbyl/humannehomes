@@ -12,7 +12,7 @@ $slideImage = clean($_POST['slideImage']); // image name from database
 $image_name = $_FILES["image"]["name"]; // image name from submitted form.
 //$attachment_name = $_FILES["attachment"]["name"]; // attachment name from submitted form.
 
-if ($slideImage !== $slideImage && !empty($slideImage)) {
+if ($image_name !== $slideImage && !empty($image_name)) {
 // Get and upload image file
     $allowed_img_ext = array("jpg", "jpeg", "gif", "png", "JPG", "JPEG", "GIF", "PNG");
 
@@ -47,47 +47,11 @@ if ($slideImage !== $slideImage && !empty($slideImage)) {
     }
 }
 
-
-//if ($event_attachment !== $attachment_name && !empty($attachment_name)) {
-//// Get and upload attachment file
-//    $allowed_file_ext = array("pdf", "doc", "docx");
-//
-//    $extension = end(explode(".", $attachment_name));
-//
-//    if (in_array($extension, $allowed_file_ext) && ($_FILES["attachment"]["size"] < 100000000)) {
-//
-//        // Checking file for errors
-//        if ($_FILES["attachment"]["error"] > 0) {
-//
-//            $message = "This file contain errors. Return Code: " . $_FILES["attachment"]["error"];
-//            //info('error', $message);
-//        } else {
-//
-//            // Uploading new attachment to doc folder.
-//            move_uploaded_file($_FILES["attachment"]["tmp_name"], "uploads/docs/" . $attachment_name);
-//
-//            // Deleting old attachment file
-//            unlink("uploads/docs/" . $news_attachment);
-//
-//            $query_attachment = "UPDATE events
-//                                 SET event_attachment = '$attachment_name'
-//                               WHERE event_id = '$id'";
-//
-//            $result_attachment = mysqli_query($link, $query_attachment) or die(mysqli_error());
-//        }
-//    } else {
-//
-//        info('error', 'This file type is not allowed');
-//        header('Location: home.php#tab2');
-//        exit(0);
-//    }
-//}
-
 $query_slide = "UPDATE frontpageslider
-                  SET `slideImageTitle` = '$imagetitle',
+                   SET `slideImageTitle` = '$imagetitle',
                       `slideImageDescription` = '$slider_description',
                        `captionID` = '$captionID'
-                WHERE `slideID` = '$id'";
+                 WHERE `slideID` = '$id'";
 
 $result_slide = mysqli_query($link, $query_slide) or die(mysqli_error($link));
 if ($result_slide) {
