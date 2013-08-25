@@ -7,7 +7,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $id = clean($_GET['id']);
 
-    // Obtaining events attachment name according to the given id
+//     Obtaining events attachment name according to the given id
 //    $query_attachment = "SELECT event_attachment
 //                           FROM events
 //                          WHERE event_id = '$id'
@@ -24,7 +24,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 //
 //    // Deleting events attachment file.
 //    unlink($attachment_path);
-    // Deleting events detail in the database.
+//     Deleting events detail in the database.
     $query_slide = "DELETE FROM frontpageslider
                          WHERE `slideID` = '$id'";
 
