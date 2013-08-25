@@ -181,20 +181,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    while ($row_courses = mysqli_fetch_array($result_courses)) {
-                                        $course_posted = date_create($row_courses['course_posted_date']);
-
-                                        echo '<tr>';
-                                        echo '<td>' . date_format($course_posted, 'd M, Y @ H:i') . '</td>';
-                                        echo '<td>' . $row_courses['course_title'] . '</td>';
-                                        echo '<td>' . $row_courses['course_description'] . '</td>';
-                                        echo '<td>' . $row_courses['duration'] . '</td>';
-                                        echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '" class="edit-courses">Edit</a></td>';
-                                        echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '" onClick="return confirm(\'Are you sure you want to delete this course?\');">Delete</a></td>';
-                                        echo '</tr>';
-                                    }
-                                    ?>
+                                 \
                                 </tbody>
                             </table>
                             <div class="clear"></div>
@@ -219,19 +206,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    while ($row_download = mysqli_fetch_array($result_downloads)) {
-                                        $posted = date_create($row_download['dwn_date_uploaded']);
-
-                                        echo '<tr>';
-                                        echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
-                                        echo '<td>' . $row_download['dwn_title'] . '</td>';
-                                        echo '<td><a href="uploads/downloads/' . $row_download['dwn_file_name'] . '">' . $row_download['dwn_file_name'] . '</a></td>';
-                                        echo '<td><a href="edit_download.php?id=' . $row_download['dwn_id'] . '" class="edit-download">Edit</a></td>';
-                                        echo '<td><a href="delete_download.php?id=' . $row_download['dwn_id'] . '" onClick="return confirm(\'Are you sure you want to delete this file?\');">Delete</a></td>';
-                                        echo '</tr>';
-                                    }
-                                    ?>
+                              
                                 </tbody>
                             </table>
                             <div class="clear"></div>
@@ -257,20 +232,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    while ($row_staff = mysqli_fetch_array($result_staff)) {
-                                        $posted_date = date_create($row_staff['posted_date']);
-
-                                        echo '<tr>';
-                                        echo '<td>' . date_format($posted_date, 'd M, Y @ H:i') . '</td>';
-                                        echo '<td><img src="uploads/images/' . $row_staff['staff_image'] . '" height="40"/></td>';
-                                        echo '<td>' . $row_staff['staff_title'] . '</td>';
-                                        echo '<td>' . $row_staff['position'] . '</td>';
-                                        echo '<td><a href="edit_staff.php?id=' . $row_staff['staff_id'] . '" class="edit-staff">Edit</a></td>';
-                                        echo '<td><a href="delete_staff.php?id=' . $row_staff['staff_id'] . '" onClick="return confirm(\'Are you sure you want to delete this staff?\');">Delete</a></td>';
-                                        echo '</tr>';
-                                    }
-                                    ?>
+                              
                                 </tbody>
                             </table>
                             <div class="clear"></div>
@@ -292,17 +254,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    while ($row_gallery = mysqli_fetch_array($result_gallery)) {
-
-                                        echo '<tr>';
-                                        echo '<td><img src="uploads/images/gallery/' . $row_gallery['photo_name'] . '" height="40"/></td>';
-                                        echo '<td>' . $row_gallery['photo_description'] . '</td>';
-                                        echo '<td><a href="edit_photo.php?id=' . $row_gallery['photo_id'] . '" class="edit-photo">Edit</a></td>';
-                                        echo '<td><a href="delete_photo.php?id=' . $row_gallery['photo_id'] . '" onClick="return confirm(\'Are you sure you want to delete this photo?\');">Delete</a></td>';
-                                        echo '</tr>';
-                                    }
-                                    ?>
+                                   
                                 </tbody>
                             </table>
                         </div>
