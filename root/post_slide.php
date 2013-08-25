@@ -20,13 +20,13 @@
                             <td><input type="text" name="title" class="text" required></td>
                         </tr>
                         <tr>
-                            <td>Slide Image <div class="file-types">(jpeg, png, gif)</div></td>
-                            <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                            <td>Slide Image* <div class="file-types">(jpeg, png, gif)</div></td>
+                            <td><input type="file" name="image" class="text" required="" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
                             <td>Caption* <div class="file-types">(pdf, doc, docx)</div></td>
                             <td width="200">
-                                <select name="captionID" required="" style="width: 512px">
+                                <select name="captionID" class="text" required="" style="width: 512px; height: 28px;">
                                     <option value="" disabled="" selected="" style="display:none;"></option>
                                     <?php
                                     $query_caption = "SELECT `captionID`, `captionName`  FROM caption  ORDER BY `captionName` ASC";
