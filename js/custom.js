@@ -192,31 +192,31 @@ jQuery(document).ready(function() {
 	// ==== CAROUSELS SECTION ==== //
 	
 	// ==== FLICKR FEED SECTION ==== //
-	jQuery("#flickr").jflickrfeed({
-			limit: 16,
-			qstrings: {
-				id: '52617155@N08'
-			},
-			itemTemplate: '<li><a href="{{image_b}}" rel="prettyPhoto[pp_gal]"><img class="flickr" src="{{image_s}}" alt="{{title}}" width="45" height="45"></a></li>'
-		}, function(data) {
-	});		
+//	jQuery("#flickr").jflickrfeed({
+//			limit: 16,
+//			qstrings: {
+//				id: '52617155@N08'
+//			},
+//			itemTemplate: '<li><a href="{{image_b}}" rel="prettyPhoto[pp_gal]"><img class="flickr" src="{{image_s}}" alt="{{title}}" width="45" height="45"></a></li>'
+//		}, function(data) {
+//	});		
 	// ==== FLICKR FEED SECTION ==== //
 	
 	// ==== TWITTER FEED SECTION ==== //
-	jQuery(function(){
-		jQuery(".twitterbody").tweet({
-		  join_text: "auto",
-		  username: "UBLDesigns",
-		  avatar_size: 48,
-		  count: 3,
-		  auto_join_text_default: "we said,",
-		  auto_join_text_ed: "we",
-		  auto_join_text_ing: "we were",
-		  auto_join_text_reply: "we replied",
-		  auto_join_text_url: "we were checking out",
-		  loading_text: "loading tweets..."
-		});
-	});
+//	jQuery(function(){
+//		jQuery(".twitterbody").tweet({
+//		  join_text: "auto",
+//		  username: "UBLDesigns",
+//		  avatar_size: 48,
+//		  count: 3,
+//		  auto_join_text_default: "we said,",
+//		  auto_join_text_ed: "we",
+//		  auto_join_text_ing: "we were",
+//		  auto_join_text_reply: "we replied",
+//		  auto_join_text_url: "we were checking out",
+//		  loading_text: "loading tweets..."
+//		});
+//	});
 	// ==== TWITTER FEED SECTION ==== //
 
 });

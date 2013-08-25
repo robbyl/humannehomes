@@ -37,13 +37,13 @@ $result_projects = mysqli_query($link, $query_projects) or die(mysqli_error($lin
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" /> 
 
         <!-- JAVASCRIPT SECTION -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
         <script src="js/modernizr.js"></script>
         <script defer src="js/jquery.flexslider-min.js"></script>
         <script src="js/jquery.jcarousel.min.js"></script>
-        <script src="js/flickr.js"></script>
-        <script src="js/twitter.js"></script>
+<!--        <script src="js/flickr.js"></script>
+        <script src="js/twitter.js"></script>-->
         <script src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
         <script src="js/jquery.easing.js"></script>
         <script src="js/jquery.mousewheel.js"></script> 
@@ -105,10 +105,10 @@ $result_projects = mysqli_query($link, $query_projects) or die(mysqli_error($lin
                                     }
                                     ?>
 
-                                    <li>
+<!--                                    <li>
                                         <iframe id="player_1" src="http://player.vimeo.com/video/44300863?api=1&amp;player_id=player_1" width="500" height="281"></iframe>
                                         <div class="flex-caption-2">You can play videos within this slider</div>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </div>
 
