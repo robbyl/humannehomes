@@ -19,7 +19,7 @@
 
             <h3>Flickr Feed</h3>
 
-            <ul id="flickr"></ul>
+            <!--<ul id="flickr"></ul>-->
 
         </div>
         <!-- WIDGET -->
@@ -28,7 +28,11 @@
 
             <h3>Contact Us</h3>
 
-            <div class="twitterbody"></div>
+            <ul>
+                <li>Tel: +255 22 2864343</li>
+                <li>Mobile: +255 784 248 227</li>
+                <li>Email: info@humannehomes.com</li>
+            </ul>
 
         </div>
         <!-- WIDGET -->
