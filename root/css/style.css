@@ -96,7 +96,7 @@ img {
 textarea {
     width: 100%;
     max-width: 675px;
-    min-height: 250px;
+    min-height: 180px;
     font-family: inherit;
     font-size: 100%;
     outline: none;
@@ -369,6 +369,8 @@ h1, h2, h3, h4 {
     border-bottom: 1px #dfdfdf solid;
     margin-bottom: 20px;
     font-size: 2em;
+    height: 50px;
+    padding-top: 10px;
 }
 
 .close {
@@ -397,7 +399,7 @@ h1, h2, h3, h4 {
 }
 
 .root-heading {
-    height: 80px;
+    /*height: 80px;*/
 }
 
 .root-heading .post {
