@@ -12,7 +12,7 @@ $slideImage = clean($_POST['slideImage']); // image name from database
 $image_name = $_FILES["image"]["name"]; // image name from submitted form.
 //$attachment_name = $_FILES["attachment"]["name"]; // attachment name from submitted form.
 
-if ($slideImage !== $slideImage && !empty($slideImage)) {
+if ($image_name !== $slideImage && !empty($image_name)) {
 // Get and upload image file
     $allowed_img_ext = array("jpg", "jpeg", "gif", "png", "JPG", "JPEG", "GIF", "PNG");
 

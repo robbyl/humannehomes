@@ -3,7 +3,7 @@
 
 if(isset($_REQUEST["isvalid"])){
     
-    $youremail = "info@domainname.com"; // ENTER YOUR EMAIL ADDRESS WHERE IT STATES info@domainname.com
+    $youremail = "info@humannehomes.com"; // ENTER YOUR EMAIL ADDRESS WHERE IT STATES info@domainname.com
     $usersemail = $_POST["usersemail"];
     $usersname = $_POST["usersname"];
     $userscomment = $_POST["userscomment"];
