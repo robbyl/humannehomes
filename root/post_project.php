@@ -29,7 +29,7 @@
                             <td><input type="text" name="projectName" class="text" required></td>
                         </tr>
                         <tr>
-                            <td>Project Image <div class="file-types">(jpeg, png, gif)</div></td>
+                            <td>Project Image* <div class="file-types">(jpeg, png, gif)</div></td>
                             <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>

@@ -46,9 +46,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                             <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td>Project Category</td>
+                            <td>Project Category*</td>
                             <td>
-                                <select name="projectCategoryID" required="" style="width: 512px">
+                                <select name="projectCategoryID" class="text" required="" style="width: 470px; height: 28px;">
                                     <option value="" disabled="" selected="" style="display:none;"></option>
                                     <?php
                                     $query_projectCategory = "SELECT `projectCategoryID`, `projectCategory` FROM projectcategory  ORDER BY projectCategory ASC";
@@ -64,9 +64,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                             </td>
                         </tr>
                         <tr>
-                            <td width="170">Project Start Date:<sup class="required-field">*</sup></td>
+                            <td width="170">Project Start Date*</td>
                             <td>
-                                <input type="date" name="projectStartDate" id="departureDate" required min="<?php echo date('Y-m-d') ?>" value="<?php echo date('Y-m-d') ?>" class="text" style="width: 500px; margin-right: 10px;">
+                                <input type="date" name="projectStartDate" id="departureDate" required value="<?php echo date('Y-m-d') ?>" class="text" style="width: 500px; margin-right: 10px; font-family: inherit;">
 
                             </td>
                         </tr>
