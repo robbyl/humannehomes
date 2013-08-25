@@ -6,6 +6,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <link href="css/style.css" rel="stylesheet" />
+        <script type="text/javascript">
+            $(document).ready(function (){
+                $('#departureDate').live('change', function() {
+                    var departureDate = $('#departureDate').val();
+                    getClassSeats(departureDate);
+                });
+            })
+        
+        </script>
 
     </head>
     <body>
@@ -29,15 +38,22 @@
                                 <select name="projectCategoryID" required="" style="width: 512px">
                                     <option value="" disabled="" selected="" style="display:none;"></option>
                                     <?php
-                                    $query_caption = "SELECT `projectCategoryID`,`projectCategory` FROM projectcategory  ORDER BY projectCategory ASC";
+                                    $query_caption = "SELECT `projectCategoryID`, `projectCategory` FROM projectcategory  ORDER BY projectCategory ASC";
                                     $result_caption = mysqli_query($link, $query_caption) or die(mysqli_error($link));
                                     while ($row_caption = mysqli_fetch_array($result_caption)) {
                                         ?>
-                                        <option value="<?php echo $row_caption['captionID'] ?>"><?php echo $row_caption['captionName'] ?></option>
+                                        <option value="<?php echo $row_caption['projectCategoryID'] ?>"><?php echo $row_caption['projectCategory'] ?></option>
                                         <?php
                                     }
                                     ?>
                                 </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="170">Project Start Date:<sup class="required-field">*</sup></td>
+                            <td>
+                                <input type="date" name="projectStartDate" id="departureDate" required min="<?php echo date('Y-m-d') ?>" value="<?php echo date('Y-m-d') ?>" class="text" style="width: 500px; margin-right: 10px;">
+
                             </td>
                         </tr>
 

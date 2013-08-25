@@ -6,6 +6,8 @@ require '../functions/general_functions.php';
 $projectName = clean($_POST['projectName']);
 $shortdescription = clean($_POST['shortdescription']);
 $fulldescription = clean($_POST['fulldescription']);
+$projectCategoryID = clean($_POST['projectCategoryID']);
+$projectStartDate = clean($_POST['projectStartDate']);
 $image_name = clean($_FILES['image']['name']); // Get image name
 //$file_name = clean($_FILES['attachment']['name']); // Get file name
 //
@@ -61,8 +63,8 @@ if (!empty($image_name)) {
 //}
 
 $query_news = "INSERT INTO project
-                      (`projectName`, nws_posted_date, nws_description, nws_attachment, nws_image)
-               VALUES ('$title', CURRENT_TIMESTAMP(), '$description', '$file_name', '$image_name')";
+                      (`projectName`, `projectImage`, `projectCategoryID`, `projectStartDate`, `shortDescription`, `fullDescription`)
+               VALUES ('$projectName', '$image_name', '$projectCategoryID', '$projectStartDate', '$shortdescription', '$fulldescription')";
 
 $result_news = mysqli_query($link, $query_news) or die(mysqli_error());
 

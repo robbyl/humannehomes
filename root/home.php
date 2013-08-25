@@ -114,7 +114,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                                         echo '<td>' . $row_project['projectName'] . '</td>';
                                         echo '<td>' . preg_replace("/\n/", "<br>", $row_project['shortDescription']) . '</td>';
                                         echo '<td>' . preg_replace("/\n/", "<br>", $row_project['fullDescription']) . '</td>';
-                                        echo '<td><a href="edit_news.php?id=' . $row_project['projectID'] . '" class="edit-news">Edit</a></td>';
+                                        echo '<td><a href="edit_project.php?id=' . $row_project['projectID'] . '" class="edit-news">Edit</a></td>';
                                         echo '<td><a href="delete_news.php?id=' . $row_project['projectID'] . '" onClick="return confirm(\'Are you sure you want to delete this project?\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
