@@ -192,9 +192,9 @@ $(document).ready(function() {
         getPopForm(this.href);
     });
 
-    $('.news').click(function(event) {
+    $('.project').click(function(event) {
         event.preventDefault();
-        getPopForm('post_news.php');
+        getPopForm('post_project.php');
     });
 
     $('.events').click(function(event) {

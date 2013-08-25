@@ -90,7 +90,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                     <div class="tab_content" id="tab1" style="display:none" >
                         <div class="root-heading">
                             <h2 class="label">Manage Projects</h2>
-                            <button class="post news">Post project</button>
+                            <button class="post project">Post project</button>
                             <div style="clear: both"></div>
                         </div>
 
@@ -110,7 +110,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                                     <?php
                                     while ($row_project = mysqli_fetch_array($result_project)) {
                                         echo '<tr>';
-                                        echo '<td>' . $row_project['projectImage'] . '</td>';
+                                        echo '<td><img src="../images/portfolio/' . $row_project['projectImage'] . '" height="40"/></td>';
                                         echo '<td>' . $row_project['projectName'] . '</td>';
                                         echo '<td>' . preg_replace("/\n/", "<br>", $row_project['shortDescription']) . '</td>';
                                         echo '<td>' . preg_replace("/\n/", "<br>", $row_project['fullDescription']) . '</td>';
