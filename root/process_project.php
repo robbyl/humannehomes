@@ -69,10 +69,10 @@ $query_news = "INSERT INTO project
 $result_news = mysqli_query($link, $query_news) or die(mysqli_error());
 
 if ($result_news) {
-    info('message', 'News posted successfully!');
+    info('message', 'Project posted successfully!');
     header('Location: home.php');
 } else {
-    info('error', 'Cannot post news!');
+    info('error', 'Cannot post project!');
     header('Location: home.php');
 }
 ?>

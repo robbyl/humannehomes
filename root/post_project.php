@@ -57,7 +57,6 @@
 
                             </td>
                         </tr>
-
                         <tr>
                             <td style="vertical-align: top">Short Description*</td>
                             <td><textarea name="shortdescription" required style="min-height: 40px"></textarea></td>
