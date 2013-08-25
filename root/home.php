@@ -64,7 +64,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
             <div class="header">
                 <ul class="nav">
                     <li>Welcome <?php echo $user_name; ?>!</li>
-                    <li><a href="../index.php">Royal-Home</a></li>|
+                    <li><a href="../index.php">Humanne Homes - Home page</a></li>|
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
                 <!-- end .header -->
@@ -79,10 +79,10 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                         <ul>
                             <li><a href="#tab1">Manage Projects</a></li>
                             <li><a href="#tab2">Manage slide</a></li>
-                            <li><a href="#tab3">Manage Modules</a></li>
+<!--                            <li><a href="#tab3">Manage Modules</a></li>
                             <li><a  href="#tab4">Manage Downloads</a></li>
                             <li><a href="#tab5">Org Structure</a></li>
-                            <li><a href="#tab6">Gallery</a></li>
+                            <li><a href="#tab6">Gallery</a></li>-->
                             <li><a href="#tab7">Change password</a></li>
                         </ul>
                     </div>
@@ -112,8 +112,8 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                                         echo '<tr>';
                                         echo '<td>' . $row_project['projectImage'] . '</td>';
                                         echo '<td>' . $row_project['projectName'] . '</td>';
-                                        echo '<td>' . $row_project['shortDescription'] . '</td>';
-                                        echo '<td>' . $row_project['fullDescription'] . '</td>';
+                                        echo '<td>' . preg_replace("/\n/", "<br>", $row_project['shortDescription']) . '</td>';
+                                        echo '<td>' . preg_replace("/\n/", "<br>", $row_project['fullDescription']) . '</td>';
                                         echo '<td><a href="edit_news.php?id=' . $row_project['projectID'] . '" class="edit-news">Edit</a></td>';
                                         echo '<td><a href="delete_news.php?id=' . $row_project['projectID'] . '" onClick="return confirm(\'Are you sure you want to delete this project?\');">Delete</a></td>';
                                         echo '</tr>';
@@ -150,7 +150,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
 //                                        echo '<td><img src="uploads/images/' . $row_staff['staff_image'] . '" height="40"/></td>';
                                         echo '<td><img src="../slider/' . $row_slider['slideImage'] . '" height="40"/></td>';
                                         echo '<td>' . $row_slider['slideImageTitle'] . '</td>';
-                                        echo '<td>' . $row_slider['slideImageDescription'] . '</td>';
+                                        echo '<td>' . preg_replace("/\n/", "<br>", $row_slider['slideImageDescription']) . '</td>';
                                         echo '<td>' . $row_slider['captionName'] . '</td>';
                                         echo '<td><a href="edit_slide.php?id=' . $row_slider['slideID'] . '" class="edit-events">Edit</a></td>';
                                         echo '<td><a href="delete_events.php?id=' . $row_slider['slideID'] . '" onClick="return confirm(\'Are you sure you want to delete this slide?\');">Delete</a></td>';
