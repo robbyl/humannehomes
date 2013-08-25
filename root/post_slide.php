@@ -20,8 +20,8 @@
                             <td><input type="text" name="title" class="text" required></td>
                         </tr>
                         <tr>
-                            <td>Slide Image <div class="file-types">(jpeg, png, gif)</div></td>
-                            <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                            <td>Slide Image* <div class="file-types">(jpeg, png, gif)</div></td>
+                            <td><input type="file" name="image" class="text" required="" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
                             <td>Caption* <div class="file-types">(pdf, doc, docx)</div></td>
