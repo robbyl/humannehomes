@@ -3,10 +3,10 @@
 require '../config/config.php';
 require '../functions/general_functions.php';
 
-$title = clean($_POST['title']);
+$projectName = clean($_POST['projectName']);
 $description = clean($_POST['description']);
 $image_name = clean($_FILES['image']['name']); // Get image name
-$file_name = clean($_FILES['attachment']['name']); // Get file name
+//$file_name = clean($_FILES['attachment']['name']); // Get file name
 //
 // Get and upload image file
 $allowed_img_ext = array("jpg", "jpeg", "gif", "png", "JPG", "JPEG", "GIF", "PNG");
