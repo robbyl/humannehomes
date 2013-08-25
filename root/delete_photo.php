@@ -13,9 +13,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                           WHERE photo_id = '$id'
                           LIMIT 1";
 
-    $result_photo = mysql_query($query_photo) or die(mysql_error());
+    $result_photo = mysqli_query($link, $query_photo) or die(mysqli_error());
 
-    $photo = mysql_fetch_array($result_photo);
+    $photo = mysqli_fetch_array($result_photo);
 
     $photo_name = $photo['photo_name'];
 
@@ -29,7 +29,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $query_gallery = "DELETE FROM gallery
                          WHERE photo_id = '$id'";
 
-    $result_gallery = mysql_query($query_gallery) or die(mysql_error());
+    $result_gallery = mysqli_query($link, $query_gallery) or die(mysqli_error());
 
     if ($result_gallery) {
         info('message', 'Photo deleted successfully!');

@@ -10,9 +10,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     WHERE dwn_id = '$id'
                     LIMIT 1";
 
-    $result_downloads = mysql_query($query_downloads) or die(mysql_error());
+    $result_downloads = mysqli_query($link, $query_downloads) or die(mysqli_error());
 
-    $row_downloads = mysql_fetch_array($result_downloads);
+    $row_downloads = mysqli_fetch_array($result_downloads);
 }
 ?>
 <!DOCTYPE html>

@@ -10,9 +10,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     WHERE nws_id = '$id'
                     LIMIT 1";
 
-    $result_news = mysql_query($query_news) or die(mysql_error());
+    $result_news = mysqli_query($links, $query_news) or die(mysqli_error());
 
-    $row_news = mysql_fetch_array($result_news);
+    $row_news = mysqli_fetch_array($result_news);
 }
 ?>
 <!DOCTYPE html>

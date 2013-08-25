@@ -35,7 +35,7 @@ $query_dwn = "INSERT INTO downloads
                       (dwn_title, dwn_date_uploaded, dwn_file_name)
                VALUES ('$title', CURRENT_TIMESTAMP(), '$file_name')";
 
-$result_dwn = mysql_query($query_dwn) or die(mysql_error());
+$result_dwn = mysqli_query($link ,$query_dwn) or die(mysqli_error());
 
 if ($result_dwn) {
     info('message', 'File uploaded successfully!');

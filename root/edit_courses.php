@@ -10,9 +10,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     WHERE course_id = '$id'
                     LIMIT 1";
 
-    $result_courses = mysql_query($query_courses) or die(mysql_error());
+    $result_courses = mysqli_query($link ,$query_courses) or die(mysqli_error());
 
-    $row_courses = mysql_fetch_array($result_courses);
+    $row_courses = mysqli_fetch_array($result_courses);
 }
 ?>
 <!DOCTYPE html>

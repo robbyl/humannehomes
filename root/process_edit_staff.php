@@ -34,7 +34,7 @@ if ($staff_image !== $image_name && !empty($image_name)) {
                                SET staff_image = '$image_name'
                              WHERE staff_id = '$id'";
 
-            $result_image = mysql_query($query_image) or die(mysql_error());
+            $result_image = mysqli_query($link, $query_image) or die(mysqli_error());
         }
     } else {
 
@@ -49,7 +49,7 @@ $query_staff = "UPDATE staff
                     position = '$position',
                     posted_date = CURRENT_TIMESTAMP()
                 WHERE staff_id = '$id'";
-$result_staff = mysql_query($query_staff) or die(mysql_error());
+$result_staff = mysqli_query($link ,$query_staff) or die(mysqli_error());
 
 if ($result_staff) {
     info('message', 'Staff updated successfully!');

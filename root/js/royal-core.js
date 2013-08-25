@@ -199,7 +199,7 @@ $(document).ready(function() {
 
     $('.events').click(function(event) {
         event.preventDefault();
-        getPopForm('post_events.php');
+        getPopForm('post_slide.php');
     });
 
     $('.courses').click(function(event) {

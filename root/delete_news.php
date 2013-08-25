@@ -13,9 +13,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                           WHERE nws_id = '$id'
                           LIMIT 1";
 
-    $result_attachment = mysql_query($query_attachment) or die(mysql_error());
+    $result_attachment = mysqli_query($links, $query_attachment) or die(mysqli_error());
 
-    $attachment = mysql_fetch_array($result_attachment);
+    $attachment = mysqli_fetch_array($result_attachment);
 
     $attachment_name = $attachment['nws_attachment'];
 
@@ -29,7 +29,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $query_news = "DELETE FROM news
                          WHERE nws_id = '$id'";
 
-    $result_news = mysql_query($query_news) or die(mysql_error());
+    $result_news = mysqli_query($links, $query_news) or die(mysqli_error());
 
     if ($result_news) {
         info('message', 'News deleted successfully!');

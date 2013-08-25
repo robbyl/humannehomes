@@ -10,9 +10,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                     WHERE photo_id = '$id'
                     LIMIT 1";
 
-    $result_gallery = mysql_query($query_gallery) or die(mysql_error());
+    $result_gallery = mysqli_query($link, $query_gallery) or die(mysqli_error());
 
-    $row_gallery = mysql_fetch_array($result_gallery);
+    $row_gallery = mysqli_fetch_array($result_gallery);
 }
 ?>
 <!DOCTYPE html>

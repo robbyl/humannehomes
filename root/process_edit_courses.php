@@ -14,7 +14,7 @@ $query_courses = "UPDATE courses
                       duration = '$duration'
                 WHERE course_id = '$id'";
 
-$result_courses = mysql_query($query_courses) or die(mysql_error());
+$result_courses = mysqli_query($link, $query_courses) or die(mysqli_error());
 if ($result_courses) {
     info('message', 'Courses updated successfully!');
     header("Location: home.php#tab3");

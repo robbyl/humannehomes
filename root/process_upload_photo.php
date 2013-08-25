@@ -35,7 +35,7 @@ $query_gallery = "INSERT INTO gallery
                       (photo_name, photo_description)
                VALUES ('$image_name', '$description')";
 
-$result_gallery = mysql_query($query_gallery) or die(mysql_error());
+$result_gallery = mysqli_query($link, $query_gallery) or die(mysqli_error());
 
 if ($result_gallery) {
     info('message', 'Photo uploaded successfully!');
