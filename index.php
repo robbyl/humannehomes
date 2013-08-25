@@ -96,7 +96,7 @@ $result_projects = mysqli_query($link, $query_projects) or die(mysqli_error($lin
                                             <div class="<?php echo $slide['captionName'] ?>">
 
                                                 <h3><?php echo $slide['slideImageTitle']; ?></h3>
-                                                <p><?php echo preg_replace("/\n/", "<br>",$slide['slideImageDescription']); ?></p>
+                                                <p><?php echo preg_replace("/\n/", "<br>", $slide['slideImageDescription']); ?></p>
                                                 <!--<p><a href="http://themeforest.net/item/lola-responsive-business-html-theme/3223355?ref=UBL" title="Buy This Template">Buy This template</a></p>-->
                                             </div>
                                         </li>
