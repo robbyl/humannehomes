@@ -153,7 +153,7 @@ $result_slider = mysqli_query($link, $query_slider) or die(mysqli_error($link));
                                         echo '<td>' . $row_slider['slideImageDescription'] . '</td>';
                                         echo '<td>' . $row_slider['captionName'] . '</td>';
                                         echo '<td><a href="edit_slide.php?id=' . $row_slider['slideID'] . '" class="edit-events">Edit</a></td>';
-                                        echo '<td><a href="delete_slide.php?id=' . $row_slider['slideID'] . '" onClick="return confirm(\'Are you sure you want to delete this slide?\');">Delete</a></td>';
+                                        echo '<td><a href="delete_events.php?id=' . $row_slider['slideID'] . '" onClick="return confirm(\'Are you sure you want to delete this slide?\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>

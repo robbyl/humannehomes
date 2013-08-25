@@ -61,13 +61,13 @@ if (!empty($image_name)) {
 
 require '../config/config.php';
 
-$query_news = "INSERT INTO frontpageslider
+$query_slide = "INSERT INTO frontpageslider
                       (`slideImageTitle`, `slideImage`,`captionID`, `slideImageDescription`)
                VALUES ('$title', '$image_name', '$captionID', '$description')";
 
-$result_news = mysqli_query($link ,$query_news) or die(mysqli_error($link));
+$result_slide = mysqli_query($link ,$query_slide) or die(mysqli_error($link));
 
-if ($result_news) {
+if ($result_slide) {
     info('message', 'Slide posted successfully!');
     header('Location: home.php#tab2');
 } else {
